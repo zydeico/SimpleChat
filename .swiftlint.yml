@@ -1,0 +1,32 @@
+disabled_rules:
+  - trailing_whitespace
+
+opt_in_rules:
+  - closure_end_indentation
+  - closure_spacing
+  - empty_count
+  - enum_case_associated_values_count
+  - explicit_init
+  - fatal_error_message
+  - file_name_no_space
+  - first_where
+  - overridden_super_call
+  - prefer_self_type_over_type_of_self
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+
+included:
+  - SimpleChat
+  - SimpleChatTests
+  - SimpleChatUITests
+
+
+# Custom values
+
+identifier_name:
+  min_length: 1
+
+line_length:
+  warning: 150
