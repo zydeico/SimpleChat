@@ -97,12 +97,9 @@
 		03F0B38925D21CC800694657 /* SimpleChat */ = {
 			isa = PBXGroup;
 			children = (
-				03F0B3D425D22E4500694657 /* main.swift */,
-				03F0B38A25D21CC800694657 /* AppDelegate.swift */,
-				03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */,
-				03F0B39325D21CCA00694657 /* Assets.xcassets */,
-				03F0B39525D21CCA00694657 /* Launch.storyboard */,
-				03F0B39825D21CCA00694657 /* Info.plist */,
+				03F0B41A25D2713C00694657 /* Application */,
+				03F0B41925D2712F00694657 /* Resources */,
+				03F0B41825D2711600694657 /* Support */,
 			);
 			path = SimpleChat;
 			sourceTree = "<group>";
@@ -123,6 +120,49 @@
 				03F0B3AE25D21CCA00694657 /* Info.plist */,
 			);
 			path = SimpleChatUITests;
+			sourceTree = "<group>";
+		};
+		03F0B41825D2711600694657 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B39825D21CCA00694657 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		03F0B41925D2712F00694657 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B39325D21CCA00694657 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		03F0B41A25D2713C00694657 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B3D425D22E4500694657 /* main.swift */,
+				03F0B38A25D21CC800694657 /* AppDelegate.swift */,
+				03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */,
+				03F0B41B25D2714C00694657 /* Scenes */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		03F0B41B25D2714C00694657 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B41C25D2715300694657 /* Launch */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		03F0B41C25D2715300694657 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B39525D21CCA00694657 /* Launch.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
