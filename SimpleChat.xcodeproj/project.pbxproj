@@ -17,6 +17,7 @@
 		03F0B42325D271DA00694657 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B42225D271DA00694657 /* Coordinator.swift */; };
 		03F0B44F25D284CB00694657 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B44E25D284CB00694657 /* Router.swift */; };
 		03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */; };
+		03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46325D288F000694657 /* CoordinatorAllocator.swift */; };
 		03F0B46925D2A89900694657 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46825D2A89900694657 /* AppRouter.swift */; };
 		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		03F0B42225D271DA00694657 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		03F0B44E25D284CB00694657 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatable.swift; sourceTree = "<group>"; };
+		03F0B46325D288F000694657 /* CoordinatorAllocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocator.swift; sourceTree = "<group>"; };
 		03F0B46825D2A89900694657 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,6 +192,7 @@
 			children = (
 				03F0B42225D271DA00694657 /* Coordinator.swift */,
 				03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */,
+				03F0B46325D288F000694657 /* CoordinatorAllocator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
 				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
