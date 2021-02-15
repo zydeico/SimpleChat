@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
 		03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AB325DA20950071C053 /* FakePresentable.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
 		03E64AB325DA20950071C053 /* FakePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePresentable.swift; sourceTree = "<group>"; };
@@ -130,6 +132,22 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		03E64A9825DA1BF10071C053 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03E64A9C25DA1BF60071C053 /* Coordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		03E64A9C25DA1BF60071C053 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		03E64AA525DA200C0071C053 /* TestDoubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				03E64AA525DA200C0071C053 /* TestDoubles */,
+				03E64A9825DA1BF10071C053 /* Navigation */,
 				03E64A8325DA150F0071C053 /* Support */,
 			);
 			path = SimpleChatTests;
@@ -380,6 +399,7 @@
 					};
 					03F0B39C25D21CCA00694657 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = 03F0B38625D21CC800694657;
 					};
 					03F0B3A725D21CCA00694657 = {
@@ -487,6 +507,7 @@
 				03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */,
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
+				03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
