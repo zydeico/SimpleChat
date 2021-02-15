@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
 		03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AB325DA20950071C053 /* FakePresentable.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
 		03E64AB325DA20950071C053 /* FakePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePresentable.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		03E64ACA25DA36840071C053 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				03E64AAE25DA20580071C053 /* DummyRouter.swift */,
 				03E64AB325DA20950071C053 /* FakePresentable.swift */,
 			);
 			path = Navigation;
@@ -478,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */,
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
