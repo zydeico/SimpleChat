@@ -110,6 +110,22 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		03E64A8325DA150F0071C053 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B3A325D21CCA00694657 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		03E64A8425DA15180071C053 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B3AE25D21CCA00694657 /* Info.plist */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		03F0B37E25D21CC700694657 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				03F0B3A125D21CCA00694657 /* SimpleChatTests.swift */,
-				03F0B3A325D21CCA00694657 /* Info.plist */,
+				03E64A8325DA150F0071C053 /* Support */,
 			);
 			path = SimpleChatTests;
 			sourceTree = "<group>";
@@ -153,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				03F0B3AC25D21CCA00694657 /* SimpleChatUITests.swift */,
-				03F0B3AE25D21CCA00694657 /* Info.plist */,
+				03E64A8425DA15180071C053 /* Support */,
 			);
 			path = SimpleChatUITests;
 			sourceTree = "<group>";
