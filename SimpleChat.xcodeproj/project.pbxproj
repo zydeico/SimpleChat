@@ -22,6 +22,7 @@
 		03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46D25D2A91B00694657 /* AppCoordinator.swift */; };
 		03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B47325D2A97600694657 /* HomeCoordinator.swift */; };
 		03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B47B25D2A9AA00694657 /* Home.storyboard */; };
+		03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B48225D2A9C900694657 /* HomeViewController.swift */; };
 		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		03F0B46D25D2A91B00694657 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		03F0B47325D2A97600694657 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		03F0B47B25D2A9AA00694657 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		03F0B48225D2A9C900694657 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,8 +202,17 @@
 			children = (
 				03F0B47B25D2A9AA00694657 /* Home.storyboard */,
 				03F0B47325D2A97600694657 /* HomeCoordinator.swift */,
+				03F0B48025D2A9B200694657 /* ViewControllers */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		03F0B48025D2A9B200694657 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B48225D2A9C900694657 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		03F0B50025D36F8C00694657 /* Coordinator */ = {
@@ -384,6 +395,7 @@
 				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
 				03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */,
 				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
+				03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */,
 				03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
 				03F0B3D525D22E4500694657 /* main.swift in Sources */,
