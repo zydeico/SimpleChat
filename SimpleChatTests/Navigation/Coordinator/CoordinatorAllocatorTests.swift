@@ -21,4 +21,10 @@ final class CoordinatorAllocatorTests: XCTestCase {
         super.tearDown()
         sut = nil
     }
+
+    func testAllocateShouldAppendCoordinator() {
+        sut.allocate(coordinator)
+        
+        XCTAssertFalse(sut.childCoordinators.isEmpty)
+    }
 }
