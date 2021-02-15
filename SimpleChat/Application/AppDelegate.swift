@@ -10,8 +10,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    private var appCoordinator: AppCoordinator?
+    private var rootViewController: Presentable {
+        guard let vc = window?.rootViewController else {
+            fatalError("The window has not been setup.")
+        }
+        return vc
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupWindow()
+        startApp()
         return true
     }
     
@@ -20,5 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController()
         window?.makeKeyAndVisible()
     }
+    
+    private func startApp() {
+        appCoordinator = AppCoordinator(router: AppRouter(rootPresentable: rootViewController))
+        appCoordinator?.start()
+    }
 }
-

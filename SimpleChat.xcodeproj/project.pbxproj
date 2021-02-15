@@ -14,6 +14,20 @@
 		03F0B3AD25D21CCA00694657 /* SimpleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3AC25D21CCA00694657 /* SimpleChatUITests.swift */; };
 		03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */; };
 		03F0B3D525D22E4500694657 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3D425D22E4500694657 /* main.swift */; };
+		03F0B42325D271DA00694657 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B42225D271DA00694657 /* Coordinator.swift */; };
+		03F0B44F25D284CB00694657 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B44E25D284CB00694657 /* Router.swift */; };
+		03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */; };
+		03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46325D288F000694657 /* CoordinatorAllocator.swift */; };
+		03F0B46925D2A89900694657 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46825D2A89900694657 /* AppRouter.swift */; };
+		03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46D25D2A91B00694657 /* AppCoordinator.swift */; };
+		03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B47325D2A97600694657 /* HomeCoordinator.swift */; };
+		03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B47B25D2A9AA00694657 /* Home.storyboard */; };
+		03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B48225D2A9C900694657 /* HomeViewController.swift */; };
+		03F0B48B25D2A9E400694657 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B48A25D2A9E400694657 /* HomeViewModel.swift */; };
+		03F0B4A925D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B4A825D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift */; };
+		03F0B4F125D36B0700694657 /* StoryboardInstanceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B4F025D36B0700694657 /* StoryboardInstanceable.swift */; };
+		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
+		03F0B51425D3AC0D00694657 /* UIViewController+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B51325D3AC0D00694657 /* UIViewController+Presentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +61,20 @@
 		03F0B3AE25D21CCA00694657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAppDelegate.swift; sourceTree = "<group>"; };
 		03F0B3D425D22E4500694657 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		03F0B42225D271DA00694657 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		03F0B44E25D284CB00694657 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatable.swift; sourceTree = "<group>"; };
+		03F0B46325D288F000694657 /* CoordinatorAllocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocator.swift; sourceTree = "<group>"; };
+		03F0B46825D2A89900694657 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		03F0B46D25D2A91B00694657 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		03F0B47325D2A97600694657 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		03F0B47B25D2A9AA00694657 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		03F0B48225D2A9C900694657 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		03F0B48A25D2A9E400694657 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		03F0B4A825D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstanceable.swift"; sourceTree = "<group>"; };
+		03F0B4F025D36B0700694657 /* StoryboardInstanceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstanceable.swift; sourceTree = "<group>"; };
+		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		03F0B51325D3AC0D00694657 /* UIViewController+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E64A7325DA07A10071C053 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B4F025D36B0700694657 /* StoryboardInstanceable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		03F0B37E25D21CC700694657 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +180,9 @@
 				03F0B3D425D22E4500694657 /* main.swift */,
 				03F0B38A25D21CC800694657 /* AppDelegate.swift */,
 				03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */,
+				03E64A7325DA07A10071C053 /* Common */,
+				03F0B4A725D2CAA600694657 /* Extensions */,
+				03F0B42025D271A700694657 /* Navigation */,
 				03F0B41B25D2714C00694657 /* Scenes */,
 			);
 			path = Application;
@@ -152,6 +191,8 @@
 		03F0B41B25D2714C00694657 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				03F0B46D25D2A91B00694657 /* AppCoordinator.swift */,
+				03F0B47225D2A96B00694657 /* Home */,
 				03F0B41C25D2715300694657 /* Launch */,
 			);
 			path = Scenes;
@@ -163,6 +204,71 @@
 				03F0B39525D21CCA00694657 /* Launch.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		03F0B42025D271A700694657 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B50125D36FCB00694657 /* Router */,
+				03F0B50025D36F8C00694657 /* Coordinator */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		03F0B47225D2A96B00694657 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B47B25D2A9AA00694657 /* Home.storyboard */,
+				03F0B47325D2A97600694657 /* HomeCoordinator.swift */,
+				03F0B48025D2A9B200694657 /* ViewControllers */,
+				03F0B48125D2A9BA00694657 /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		03F0B48025D2A9B200694657 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B48225D2A9C900694657 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		03F0B48125D2A9BA00694657 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B48A25D2A9E400694657 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		03F0B4A725D2CAA600694657 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B51325D3AC0D00694657 /* UIViewController+Presentable.swift */,
+				03F0B4A825D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03F0B50025D36F8C00694657 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B42225D271DA00694657 /* Coordinator.swift */,
+				03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */,
+				03F0B46325D288F000694657 /* CoordinatorAllocator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		03F0B50125D36FCB00694657 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B46825D2A89900694657 /* AppRouter.swift */,
+				03F0B50225D36FD900694657 /* Presentable.swift */,
+				03F0B44E25D284CB00694657 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */,
 				03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */,
 				03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */,
 			);
@@ -316,7 +423,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
+				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
+				03F0B51425D3AC0D00694657 /* UIViewController+Presentable.swift in Sources */,
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
+				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
+				03F0B46925D2A89900694657 /* AppRouter.swift in Sources */,
+				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
+				03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */,
+				03F0B4F125D36B0700694657 /* StoryboardInstanceable.swift in Sources */,
+				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
+				03F0B4A925D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift in Sources */,
+				03F0B48B25D2A9E400694657 /* HomeViewModel.swift in Sources */,
+				03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */,
+				03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
 				03F0B3D525D22E4500694657 /* main.swift in Sources */,
 			);
