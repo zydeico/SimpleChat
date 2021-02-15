@@ -20,6 +20,7 @@
 		03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46325D288F000694657 /* CoordinatorAllocator.swift */; };
 		03F0B46925D2A89900694657 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46825D2A89900694657 /* AppRouter.swift */; };
 		03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B46D25D2A91B00694657 /* AppCoordinator.swift */; };
+		03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B47325D2A97600694657 /* HomeCoordinator.swift */; };
 		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		03F0B46325D288F000694657 /* CoordinatorAllocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocator.swift; sourceTree = "<group>"; };
 		03F0B46825D2A89900694657 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		03F0B46D25D2A91B00694657 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		03F0B47325D2A97600694657 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				03F0B46D25D2A91B00694657 /* AppCoordinator.swift */,
+				03F0B47225D2A96B00694657 /* Home */,
 				03F0B41C25D2715300694657 /* Launch */,
 			);
 			path = Scenes;
@@ -188,6 +191,14 @@
 				03F0B50025D36F8C00694657 /* Coordinator */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		03F0B47225D2A96B00694657 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B47325D2A97600694657 /* HomeCoordinator.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		03F0B50025D36F8C00694657 /* Coordinator */ = {
@@ -369,6 +380,7 @@
 				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
 				03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */,
 				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
+				03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
 				03F0B3D525D22E4500694657 /* main.swift in Sources */,
 			);
