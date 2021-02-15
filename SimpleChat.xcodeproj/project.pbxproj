@@ -265,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				03F0B46825D2A89900694657 /* AppRouter.swift */,
-				03F0B44E25D284CB00694657 /* Router.swift */,
 				03F0B50225D36FD900694657 /* Presentable.swift */,
+				03F0B44E25D284CB00694657 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
