@@ -15,5 +15,13 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
+        showHomeScreen()
+    }
+    
+    private func showHomeScreen() {
+        let vc = HomeViewController.instantiate()
+        let vm = HomeViewModel()
+        vc.viewModel = vm
+        router.setRoot([vc])
     }
 }
