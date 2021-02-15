@@ -23,6 +23,7 @@
 		03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B47325D2A97600694657 /* HomeCoordinator.swift */; };
 		03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B47B25D2A9AA00694657 /* Home.storyboard */; };
 		03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B48225D2A9C900694657 /* HomeViewController.swift */; };
+		03F0B48B25D2A9E400694657 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B48A25D2A9E400694657 /* HomeViewModel.swift */; };
 		03F0B4A925D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B4A825D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift */; };
 		03F0B4F125D36B0700694657 /* StoryboardInstanceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B4F025D36B0700694657 /* StoryboardInstanceable.swift */; };
 		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
@@ -69,6 +70,7 @@
 		03F0B47325D2A97600694657 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		03F0B47B25D2A9AA00694657 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03F0B48225D2A9C900694657 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		03F0B48A25D2A9E400694657 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		03F0B4A825D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstanceable.swift"; sourceTree = "<group>"; };
 		03F0B4F025D36B0700694657 /* StoryboardInstanceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstanceable.swift; sourceTree = "<group>"; };
 		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				03F0B47B25D2A9AA00694657 /* Home.storyboard */,
 				03F0B47325D2A97600694657 /* HomeCoordinator.swift */,
 				03F0B48025D2A9B200694657 /* ViewControllers */,
+				03F0B48125D2A9BA00694657 /* ViewModels */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -229,6 +232,14 @@
 				03F0B48225D2A9C900694657 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		03F0B48125D2A9BA00694657 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				03F0B48A25D2A9E400694657 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		03F0B4A725D2CAA600694657 /* Extensions */ = {
@@ -423,6 +434,7 @@
 				03F0B4F125D36B0700694657 /* StoryboardInstanceable.swift in Sources */,
 				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
 				03F0B4A925D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift in Sources */,
+				03F0B48B25D2A9E400694657 /* HomeViewModel.swift in Sources */,
 				03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */,
 				03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
