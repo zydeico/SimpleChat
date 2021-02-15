@@ -18,5 +18,12 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
+        startHome()
+    }
+    
+    private func startHome() {
+        let coordinator = HomeCoordinator(router: router)
+        coordinatorAllocator.allocate(coordinator)
+        coordinator.start()
     }
 }
