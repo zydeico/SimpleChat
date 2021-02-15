@@ -9,4 +9,6 @@ import UIKit
 
 final class HomeViewController: UIViewController, StoryboardInstanceable {
     static let storyboardName: String = "Home"
+    
+    var viewModel: HomeViewModel!
 }
