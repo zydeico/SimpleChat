@@ -16,6 +16,7 @@
 		03F0B3D525D22E4500694657 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3D425D22E4500694657 /* main.swift */; };
 		03F0B42325D271DA00694657 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B42225D271DA00694657 /* Coordinator.swift */; };
 		03F0B44F25D284CB00694657 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B44E25D284CB00694657 /* Router.swift */; };
+		03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */; };
 		03F0B50325D36FD900694657 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B50225D36FD900694657 /* Presentable.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		03F0B3D425D22E4500694657 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		03F0B42225D271DA00694657 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		03F0B44E25D284CB00694657 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatable.swift; sourceTree = "<group>"; };
 		03F0B50225D36FD900694657 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				03F0B42225D271DA00694657 /* Coordinator.swift */,
+				03F0B45E25D2885600694657 /* CoordinatorAllocatable.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
 				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
+				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
 				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
 				03F0B3D525D22E4500694657 /* main.swift in Sources */,
