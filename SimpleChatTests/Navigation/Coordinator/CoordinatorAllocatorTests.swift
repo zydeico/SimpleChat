@@ -27,4 +27,11 @@ final class CoordinatorAllocatorTests: XCTestCase {
         
         XCTAssertFalse(sut.childCoordinators.isEmpty)
     }
+    
+    func testDeallocateShouldRemoveCoordinator() {
+        sut.allocate(coordinator)
+        sut.deallocate(coordinator)
+        
+        XCTAssertTrue(sut.childCoordinators.isEmpty)
+    }
 }
