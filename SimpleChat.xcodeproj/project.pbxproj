@@ -10,7 +10,6 @@
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
-		03F0B3A225D21CCA00694657 /* SimpleChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3A125D21CCA00694657 /* SimpleChatTests.swift */; };
 		03F0B3AD25D21CCA00694657 /* SimpleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3AC25D21CCA00694657 /* SimpleChatUITests.swift */; };
 		03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3CF25D22E2600694657 /* FakeAppDelegate.swift */; };
 		03F0B3D525D22E4500694657 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B3D425D22E4500694657 /* main.swift */; };
@@ -54,7 +53,6 @@
 		03F0B39625D21CCA00694657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launch.storyboard; sourceTree = "<group>"; };
 		03F0B39825D21CCA00694657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F0B39D25D21CCA00694657 /* SimpleChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03F0B3A125D21CCA00694657 /* SimpleChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatTests.swift; sourceTree = "<group>"; };
 		03F0B3A325D21CCA00694657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F0B3A825D21CCA00694657 /* SimpleChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B3AC25D21CCA00694657 /* SimpleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatUITests.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 		03F0B3A025D21CCA00694657 /* SimpleChatTests */ = {
 			isa = PBXGroup;
 			children = (
-				03F0B3A125D21CCA00694657 /* SimpleChatTests.swift */,
 				03E64A8325DA150F0071C053 /* Support */,
 			);
 			path = SimpleChatTests;
@@ -462,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03F0B3A225D21CCA00694657 /* SimpleChatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
