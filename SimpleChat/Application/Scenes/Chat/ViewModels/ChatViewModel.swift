@@ -7,5 +7,10 @@
 
 import Foundation
 
+protocol ChatViewModelDelegate: AnyObject {
+    func didTapBack()
+}
+
 final class ChatViewModel {
+    weak var delegate: ChatViewModelDelegate?
 }
