@@ -12,9 +12,15 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 final class HomeViewModel {
-    let title = "Simple Chat"
+    let title = NSLocalizedString("common.appTitle", comment: "")
+    let contactsPermissionAlertTitle = NSLocalizedString("permissions.contacts.alert.title", comment: "")
+    let contactsPermissionAlertMessage = NSLocalizedString("permissions.contacts.alert.message", comment: "")
+    let contactsPermissionAlertButtonTitle = NSLocalizedString("common.ok", comment: "")
     
     weak var delegate: HomeViewModelDelegate?
+    var shouldRequestManualContactsPermission: Bool {
+        return contactsPermissionRequester.isPermissionRequested && !contactsPermissionRequester.isPermissionGranted
+    }
     
     private let contactsPermissionRequester: PermissionRequestable
     private var items: [ContactCellViewModel] = [
