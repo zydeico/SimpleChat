@@ -29,4 +29,4 @@ identifier_name:
   min_length: 1
 
 line_length:
-  warning: 150
+  warning: 180
