@@ -21,8 +21,15 @@ final class ChatCoordinator: Coordinator {
     private func showChatScreen() {
         let vc = ChatViewController.instantiate()
         let vm = ChatViewModel()
+        vm.delegate = self
         vc.viewModel = vm
         router.push(vc)
     }
+}
+
+// MARK: - View model delegates
+
+extension ChatCoordinator: ChatViewModelDelegate {
+    func didTapBack() {
     }
 }
