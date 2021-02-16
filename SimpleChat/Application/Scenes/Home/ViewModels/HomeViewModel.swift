@@ -9,4 +9,8 @@ import Foundation
 
 final class HomeViewModel {
     let title = "Simple Chat"
+    
+    private var items: [ContactCellViewModel] = [
+        ContactCellViewModel(name: "Name", lastName: "LastName", imageData: nil)
+    ]
 }
