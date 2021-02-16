@@ -24,5 +24,6 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     }
     
     @objc private func leftBarButtonTapped() {
+        viewModel.tapBack()
     }
 }

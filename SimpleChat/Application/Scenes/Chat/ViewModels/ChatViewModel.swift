@@ -13,4 +13,8 @@ protocol ChatViewModelDelegate: AnyObject {
 
 final class ChatViewModel {
     weak var delegate: ChatViewModelDelegate?
+    
+    func tapBack() {
+        delegate?.didTapBack()
+    }
 }
