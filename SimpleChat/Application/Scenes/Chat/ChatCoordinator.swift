@@ -13,6 +13,7 @@ protocol ChatCoordinatorDelegate: AnyObject {
 
 final class ChatCoordinator: Coordinator {
     var router: Router
+    weak var delegate: ChatCoordinatorDelegate?
     
     init(router: Router) {
         self.router = router
