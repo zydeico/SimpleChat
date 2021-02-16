@@ -9,7 +9,8 @@ import Foundation
 
 final class HomeCoordinator: Coordinator {
     let router: Router
-    let coordinatorAllocator: CoordinatorAllocatable
+    
+    private let coordinatorAllocator: CoordinatorAllocatable
     
     init(router: Router, coordinatorAllocator: CoordinatorAllocatable = CoordinatorAllocator()) {
         self.router = router
