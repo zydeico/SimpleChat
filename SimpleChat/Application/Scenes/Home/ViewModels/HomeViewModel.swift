@@ -7,8 +7,14 @@
 
 import Foundation
 
+protocol HomeViewModelDelegate: AnyObject {
+    func didSelectContact()
+}
+
 final class HomeViewModel {
     let title = "Simple Chat"
+    
+    weak var delegate: HomeViewModelDelegate?
     
     private var items: [ContactCellViewModel] = [
         ContactCellViewModel(name: "Name", lastName: "LastName", imageData: nil)
@@ -20,5 +26,9 @@ final class HomeViewModel {
     
     func getCellViewModel(at indexPath: IndexPath) -> ContactCellViewModel {
         return items[indexPath.item]
+    }
+    
+    func selectItem(at indexPath: IndexPath) {
+        delegate?.didSelectContact()
     }
 }

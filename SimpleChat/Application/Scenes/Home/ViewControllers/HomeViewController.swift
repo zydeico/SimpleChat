@@ -34,7 +34,14 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         layout.minimumLineSpacing = 5.0
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+        collectionView.delegate = self
         collectionView.dataSource = self
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectItem(at: indexPath)
     }
 }
 
