@@ -11,6 +11,10 @@
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
 		03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AB325DA20950071C053 /* FakePresentable.swift */; };
+		03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AF025DA929E0071C053 /* ContactCollectionViewCell.swift */; };
+		03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E64AF125DA929E0071C053 /* ContactCollectionViewCell.xib */; };
+		03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B0A25DA9DB20071C053 /* Colors.xcassets */; };
+		03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -55,6 +59,10 @@
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
 		03E64AB325DA20950071C053 /* FakePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePresentable.swift; sourceTree = "<group>"; };
+		03E64AF025DA929E0071C053 /* ContactCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E64AF125DA929E0071C053 /* ContactCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCollectionViewCell.xib; sourceTree = "<group>"; };
+		03E64B0A25DA9DB20071C053 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellViewModel.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +174,24 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		03E64AE425DA92680071C053 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B2125DB86440071C053 /* ContactCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		03E64B2125DB86440071C053 /* ContactCell */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */,
+				03E64AF125DA929E0071C053 /* ContactCollectionViewCell.xib */,
+				03E64AF025DA929E0071C053 /* ContactCollectionViewCell.swift */,
+			);
+			path = ContactCell;
+			sourceTree = "<group>";
+		};
 		03F0B37E25D21CC700694657 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				03F0B39325D21CCA00694657 /* Assets.xcassets */,
+				03E64B0A25DA9DB20071C053 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -279,6 +306,7 @@
 				03F0B47325D2A97600694657 /* HomeCoordinator.swift */,
 				03F0B48025D2A9B200694657 /* ViewControllers */,
 				03F0B48125D2A9BA00694657 /* ViewModels */,
+				03E64AE425DA92680071C053 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -433,7 +461,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */,
 				03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */,
+				03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */,
 				03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */,
 				03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */,
 			);
@@ -482,7 +512,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
+				03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */,
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
+				03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */,
 				03F0B51425D3AC0D00694657 /* UIViewController+Presentable.swift in Sources */,
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
 				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
