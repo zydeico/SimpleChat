@@ -20,6 +20,12 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        viewModel.requestContactsPermission()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showRequestManualContactsPermissionAlertIfNeeded()
     }
     
     private func setUpNavigationBar() {
@@ -37,13 +43,28 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
+    private func showRequestManualContactsPermissionAlertIfNeeded() {
+        guard viewModel.shouldRequestManualContactsPermission else {
+            return
+        }
+        let alert = UIAlertController(title: viewModel.contactsPermissionAlertTitle,
+                                      message: viewModel.contactsPermissionAlertMessage,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: viewModel.contactsPermissionAlertButtonTitle, style: .default))
+        present(alert, animated: true)
+    }
 }
+
+// MARK: - UICollectionViewDelegate
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectItem(at: indexPath)
     }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

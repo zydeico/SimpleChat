@@ -21,8 +21,10 @@
 		03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B4025DB90850071C053 /* ChatViewModel.swift */; };
 		03E64B6525DBC0A40071C053 /* PermissionRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */; };
 		03E64B6F25DBC1AA0071C053 /* ContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */; };
+		03E64B7725DBC61C0071C053 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B7625DBC61C0071C053 /* InfoPlist.strings */; };
 		03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */; };
 		03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BA025DBEF180071C053 /* MockCNContactStore.swift */; };
+		03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64BBD25DC013C0071C053 /* Localizable.strings */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -77,8 +79,10 @@
 		03E64B4025DB90850071C053 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestable.swift; sourceTree = "<group>"; };
 		03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequester.swift; sourceTree = "<group>"; };
+		03E64B7625DBC61C0071C053 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequesterTests.swift; sourceTree = "<group>"; };
 		03E64BA025DBEF180071C053 /* MockCNContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCNContactStore.swift; sourceTree = "<group>"; };
+		03E64BBD25DC013C0071C053 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				03F0B39825D21CCA00694657 /* Info.plist */,
+				03E64B7625DBC61C0071C053 /* InfoPlist.strings */,
+				03E64BBD25DC013C0071C053 /* Localizable.strings */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -566,9 +572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E64B3225DB90260071C053 /* Chat.storyboard in Resources */,
+				03E64B7725DBC61C0071C053 /* InfoPlist.strings in Resources */,
 				03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */,
 				03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */,
 				03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */,
+				03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */,
 				03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */,
 				03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */,
 			);

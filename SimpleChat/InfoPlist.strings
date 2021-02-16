@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  SimpleChat
+
+  Created by Erik Lopez on 2021/02/16.
+  
+*/
+
+"NSContactsUsageDescription" = "List contacts for a chat.";

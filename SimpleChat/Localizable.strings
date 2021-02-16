@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SimpleChat
+
+  Created by Erik Lopez on 2021/02/16.
+  
+*/
+
+"common.appTitle" = "Simple Chat";
+"common.ok" = "OK";
+
+"permissions.contacts.alert.title" = "Allow access to your Contacts";
+"permissions.contacts.alert.message" = "Open settings to allow access to your contacts.";

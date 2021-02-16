@@ -23,7 +23,7 @@ final class HomeCoordinator: Coordinator {
     
     private func showHomeScreen() {
         let vc = HomeViewController.instantiate()
-        let vm = HomeViewModel()
+        let vm = HomeViewModel(contactsPermissionRequester: ContactsPermissionRequester())
         vm.delegate = self
         vc.viewModel = vm
         router.setRoot([vc])
