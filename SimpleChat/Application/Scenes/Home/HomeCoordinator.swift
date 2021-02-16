@@ -9,9 +9,11 @@ import Foundation
 
 final class HomeCoordinator: Coordinator {
     let router: Router
+    let coordinatorAllocator: CoordinatorAllocatable
     
-    init(router: Router) {
+    init(router: Router, coordinatorAllocator: CoordinatorAllocatable = CoordinatorAllocator()) {
         self.router = router
+        self.coordinatorAllocator = coordinatorAllocator
     }
     
     func start() {
