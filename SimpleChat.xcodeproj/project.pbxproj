@@ -17,6 +17,7 @@
 		03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */; };
 		03E64B2A25DB901D0071C053 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B2925DB901D0071C053 /* ChatCoordinator.swift */; };
 		03E64B3225DB90260071C053 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B3125DB90260071C053 /* Chat.storyboard */; };
+		03E64B3925DB907A0071C053 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B3825DB907A0071C053 /* ChatViewController.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -67,6 +68,7 @@
 		03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellViewModel.swift; sourceTree = "<group>"; };
 		03E64B2925DB901D0071C053 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
 		03E64B3125DB90260071C053 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		03E64B3825DB907A0071C053 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,8 +203,17 @@
 			children = (
 				03E64B3125DB90260071C053 /* Chat.storyboard */,
 				03E64B2925DB901D0071C053 /* ChatCoordinator.swift */,
+				03E64B3625DB90620071C053 /* ViewControllers */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		03E64B3625DB90620071C053 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B3825DB907A0071C053 /* ChatViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		03F0B37E25D21CC700694657 = {
@@ -544,6 +555,7 @@
 				03F0B48325D2A9C900694657 /* HomeViewController.swift in Sources */,
 				03F0B47425D2A97600694657 /* HomeCoordinator.swift in Sources */,
 				03F0B3D025D22E2600694657 /* FakeAppDelegate.swift in Sources */,
+				03E64B3925DB907A0071C053 /* ChatViewController.swift in Sources */,
 				03F0B3D525D22E4500694657 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
