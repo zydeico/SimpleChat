@@ -15,6 +15,7 @@ final class ContactCollectionViewCell: UICollectionViewCell {
     
     var viewModel: ContactCellViewModel? {
         didSet {
+            setUpModel()
         }
     }
     
@@ -28,6 +29,15 @@ final class ContactCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
+    }
+    
+    private func setUpModel() {
+        nameLabel.text = viewModel?.name
+        lastNameLabel.text = viewModel?.lastName
+        if let d = viewModel?.imageData,
+           let image = UIImage(data: d) {
+            imageView.image = image
+        }
     }
     
     private func setUpLayer() {
