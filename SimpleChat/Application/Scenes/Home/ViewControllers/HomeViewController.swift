@@ -34,5 +34,20 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         layout.minimumLineSpacing = 5.0
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+        collectionView.dataSource = self
+    }
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.getNumberOfItems(in: section)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? ContactCollectionViewCell else {
+            fatalError("Could not dequeue cell.")
+        }
+        cell.viewModel = viewModel.getCellViewModel(at: indexPath)
+        return cell
     }
 }
