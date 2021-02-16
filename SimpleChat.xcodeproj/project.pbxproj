@@ -19,6 +19,7 @@
 		03E64B3225DB90260071C053 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B3125DB90260071C053 /* Chat.storyboard */; };
 		03E64B3925DB907A0071C053 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B3825DB907A0071C053 /* ChatViewController.swift */; };
 		03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B4025DB90850071C053 /* ChatViewModel.swift */; };
+		03E64B6525DBC0A40071C053 /* PermissionRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -71,6 +72,7 @@
 		03E64B3125DB90260071C053 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		03E64B3825DB907A0071C053 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		03E64B4025DB90850071C053 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestable.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		03E64B6325DBC0620071C053 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		03F0B37E25D21CC700694657 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		03F0B38925D21CC800694657 /* SimpleChat */ = {
 			isa = PBXGroup;
 			children = (
+				03E64B6325DBC0620071C053 /* UseCases */,
 				03F0B41A25D2713C00694657 /* Application */,
 				03F0B41925D2712F00694657 /* Resources */,
 				03F0B41825D2711600694657 /* Support */,
@@ -554,6 +565,7 @@
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
 				03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */,
 				03F0B51425D3AC0D00694657 /* UIViewController+Presentable.swift in Sources */,
+				03E64B6525DBC0A40071C053 /* PermissionRequestable.swift in Sources */,
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
 				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
 				03F0B46925D2A89900694657 /* AppRouter.swift in Sources */,
