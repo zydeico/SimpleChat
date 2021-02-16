@@ -1,7 +1,6 @@
 name: Tests
 
 on:
-  pull_request:
   push:
     branches:
       - main
@@ -11,7 +10,5 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Switch to Xcode
-        run: sudo xcode-select -switch /Applications/Xcode_12.4.app
       - name: Run tests
-        run: xcodebuild clean test -project "SimpleChat.xcodeproj" -scheme "SimpleChat" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=14.4"
+        run: xcodebuild clean test -project "SimpleChat.xcodeproj" -scheme "SimpleChat" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
