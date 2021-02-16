@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol ChatCoordinatorDelegate: AnyObject {
+    func didFinish(coordinator: ChatCoordinator)
+}
+
 final class ChatCoordinator: Coordinator {
     var router: Router
     
