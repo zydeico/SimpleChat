@@ -21,7 +21,15 @@ final class HomeCoordinator: Coordinator {
     private func showHomeScreen() {
         let vc = HomeViewController.instantiate()
         let vm = HomeViewModel()
+        vm.delegate = self
         vc.viewModel = vm
         router.setRoot([vc])
     }
+
+// MARK: - View model delegates
+
+extension HomeCoordinator: HomeViewModelDelegate {
+    func didSelectContact() {
+    }
+}
 }
