@@ -13,6 +13,11 @@ final class ContactCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var lastNameLabel: UILabel!
     
+    var viewModel: ContactCellViewModel? {
+        didSet {
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpLayer()
