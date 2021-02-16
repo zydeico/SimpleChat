@@ -263,6 +263,7 @@
 		03E64B9125DBECF40071C053 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				03E64A9825DA1BF10071C053 /* Navigation */,
 				03E64B9225DBECFC0071C053 /* Services */,
 			);
 			path = Application;
@@ -328,7 +329,6 @@
 			children = (
 				03E64B9125DBECF40071C053 /* Application */,
 				03E64AA525DA200C0071C053 /* TestDoubles */,
-				03E64A9825DA1BF10071C053 /* Navigation */,
 				03E64A8325DA150F0071C053 /* Support */,
 			);
 			path = SimpleChatTests;
