@@ -20,6 +20,11 @@ final class ContactCollectionViewCell: UICollectionViewCell {
         setUpImageView()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+    }
+    
     private func setUpLayer() {
         layer.shadowColor = UIColor(named: "Shadow")?.cgColor
         layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
