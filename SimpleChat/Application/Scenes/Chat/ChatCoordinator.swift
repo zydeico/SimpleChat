@@ -37,5 +37,6 @@ final class ChatCoordinator: Coordinator {
 extension ChatCoordinator: ChatViewModelDelegate {
     func didTapBack() {
         router.pop()
+        delegate?.didFinish(coordinator: self)
     }
 }

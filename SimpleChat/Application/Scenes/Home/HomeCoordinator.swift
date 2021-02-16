@@ -48,5 +48,6 @@ extension HomeCoordinator: HomeViewModelDelegate {
 
 extension HomeCoordinator: ChatCoordinatorDelegate {
     func didFinish(coordinator: ChatCoordinator) {
+        coordinatorAllocator.deallocate(coordinator)
     }
 }
