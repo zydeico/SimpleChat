@@ -17,6 +17,7 @@ final class ContactCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         setUpLayer()
         setUpMainView()
+        setUpImageView()
     }
     
     private func setUpLayer() {
@@ -31,5 +32,12 @@ final class ContactCollectionViewCell: UICollectionViewCell {
         mainView.layer.borderWidth = 1.0
         mainView.layer.borderColor = UIColor(named: "Border")?.cgColor
         mainView.clipsToBounds = true
+    }
+    
+    private func setUpImageView() {
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = imageView.frame.height / 2.0
+        imageView.clipsToBounds = true
+        imageView.backgroundColor = UIColor(named: "Placeholder")
     }
 }
