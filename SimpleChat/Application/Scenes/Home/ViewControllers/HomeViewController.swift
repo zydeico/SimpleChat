@@ -29,7 +29,7 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
     private func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
         let padding: CGFloat = 10.0
-        layout.itemSize = CGSize(width: collectionView.frame.width - padding, height: 100.0)
+        layout.itemSize = CGSize(width: view.frame.width - padding * 2.0, height: 100.0)
         layout.sectionInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 0.0)
         layout.minimumLineSpacing = 5.0
         collectionView.collectionViewLayout = layout
