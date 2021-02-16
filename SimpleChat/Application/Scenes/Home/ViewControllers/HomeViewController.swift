@@ -56,11 +56,15 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel.selectItem(at: indexPath)
     }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
