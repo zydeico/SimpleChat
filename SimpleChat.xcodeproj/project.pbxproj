@@ -16,6 +16,7 @@
 		03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B0A25DA9DB20071C053 /* Colors.xcassets */; };
 		03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */; };
 		03E64B2A25DB901D0071C053 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B2925DB901D0071C053 /* ChatCoordinator.swift */; };
+		03E64B3225DB90260071C053 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B3125DB90260071C053 /* Chat.storyboard */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -65,6 +66,7 @@
 		03E64B0A25DA9DB20071C053 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		03E64B1725DB73EB0071C053 /* ContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellViewModel.swift; sourceTree = "<group>"; };
 		03E64B2925DB901D0071C053 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
+		03E64B3125DB90260071C053 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		03E64B2825DB900E0071C053 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				03E64B3125DB90260071C053 /* Chat.storyboard */,
 				03E64B2925DB901D0071C053 /* ChatCoordinator.swift */,
 			);
 			path = Chat;
@@ -472,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E64B3225DB90260071C053 /* Chat.storyboard in Resources */,
 				03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */,
 				03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */,
 				03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */,
