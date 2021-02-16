@@ -29,5 +29,6 @@ final class HomeViewModel {
     }
     
     func selectItem(at indexPath: IndexPath) {
+        delegate?.didSelectContact()
     }
 }

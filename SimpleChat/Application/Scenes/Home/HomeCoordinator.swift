@@ -27,11 +27,19 @@ final class HomeCoordinator: Coordinator {
         vc.viewModel = vm
         router.setRoot([vc])
     }
+    
+    private func startChat() {
+        let coordinator = ChatCoordinator(router: router)
+        coordinatorAllocator.allocate(coordinator)
+        coordinator.start()
+    }
+}
 
 // MARK: - View model delegates
 
 extension HomeCoordinator: HomeViewModelDelegate {
     func didSelectContact() {
+        startChat()
     }
 }
 }
