@@ -10,5 +10,7 @@ import UIKit
 final class HomeViewController: UIViewController, StoryboardInstanceable {
     static let storyboardName: String = "Home"
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     var viewModel: HomeViewModel!
 }
