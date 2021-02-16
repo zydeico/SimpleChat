@@ -21,6 +21,7 @@
 		03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B4025DB90850071C053 /* ChatViewModel.swift */; };
 		03E64B6525DBC0A40071C053 /* PermissionRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */; };
 		03E64B6F25DBC1AA0071C053 /* ContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */; };
+		03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */; };
 		03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BA025DBEF180071C053 /* MockCNContactStore.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		03E64B4025DB90850071C053 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestable.swift; sourceTree = "<group>"; };
 		03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequester.swift; sourceTree = "<group>"; };
+		03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequesterTests.swift; sourceTree = "<group>"; };
 		03E64BA025DBEF180071C053 /* MockCNContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCNContactStore.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +260,30 @@
 			path = Contacts;
 			sourceTree = "<group>";
 		};
+		03E64B9125DBECF40071C053 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B9225DBECFC0071C053 /* Services */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		03E64B9225DBECFC0071C053 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B9625DBED8D0071C053 /* Contacts */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		03E64B9625DBED8D0071C053 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
 		03E64B9F25DBEDFB0071C053 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +326,7 @@
 		03F0B3A025D21CCA00694657 /* SimpleChatTests */ = {
 			isa = PBXGroup;
 			children = (
+				03E64B9125DBECF40071C053 /* Application */,
 				03E64AA525DA200C0071C053 /* TestDoubles */,
 				03E64A9825DA1BF10071C053 /* Navigation */,
 				03E64A8325DA150F0071C053 /* Support */,
@@ -623,6 +650,7 @@
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
 				03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */,
+				03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */,
 				03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
