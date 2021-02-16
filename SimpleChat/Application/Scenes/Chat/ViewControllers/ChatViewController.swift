@@ -10,6 +10,8 @@ import UIKit
 final class ChatViewController: UIViewController, StoryboardInstanceable {
     static var storyboardName: String = "Chat"
     
+    var viewModel: ChatViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()

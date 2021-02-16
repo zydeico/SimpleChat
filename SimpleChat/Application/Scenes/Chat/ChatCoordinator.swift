@@ -15,5 +15,14 @@ final class ChatCoordinator: Coordinator {
     }
     
     func start() {
+        showChatScreen()
+    }
+    
+    private func showChatScreen() {
+        let vc = ChatViewController.instantiate()
+        let vm = ChatViewModel()
+        vc.viewModel = vm
+        router.push(vc)
+    }
     }
 }
