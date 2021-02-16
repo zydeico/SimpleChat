@@ -20,6 +20,7 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        viewModel.requestContactsPermission()
     }
     
     private func setUpNavigationBar() {

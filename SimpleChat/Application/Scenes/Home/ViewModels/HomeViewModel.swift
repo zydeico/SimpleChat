@@ -23,6 +23,10 @@ final class HomeViewModel {
     
     init(contactsPermissionRequester: PermissionRequestable) {
         self.contactsPermissionRequester = contactsPermissionRequester
+    
+    func requestContactsPermission() {
+        contactsPermissionRequester.requestPermission(completionHandler: { _, _ in })
+    }
     }
     
     func getNumberOfItems(in section: Int) -> Int {
