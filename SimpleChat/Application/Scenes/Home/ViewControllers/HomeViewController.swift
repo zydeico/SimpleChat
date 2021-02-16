@@ -13,4 +13,13 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     var viewModel: HomeViewModel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpNavigationBar()
+    }
+    
+    private func setUpNavigationBar() {
+        navigationItem.title = viewModel.title
+    }
 }
