@@ -21,4 +21,7 @@ final class HomeViewModel {
     func getCellViewModel(at indexPath: IndexPath) -> ContactCellViewModel {
         return items[indexPath.item]
     }
+    
+    func selectItem(at indexPath: IndexPath) {
+    }
 }
