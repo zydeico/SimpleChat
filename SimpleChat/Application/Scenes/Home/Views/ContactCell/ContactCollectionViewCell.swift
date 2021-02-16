@@ -16,6 +16,7 @@ final class ContactCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpLayer()
+        setUpMainView()
     }
     
     private func setUpLayer() {
@@ -23,5 +24,12 @@ final class ContactCollectionViewCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         layer.shadowOpacity = 0.5
         layer.shadowRadius = 2.0
+    }
+    
+    private func setUpMainView() {
+        mainView.layer.cornerRadius = 8.0
+        mainView.layer.borderWidth = 1.0
+        mainView.layer.borderColor = UIColor(named: "Border")?.cgColor
+        mainView.clipsToBounds = true
     }
 }
