@@ -16,9 +16,14 @@ final class HomeViewModel {
     
     weak var delegate: HomeViewModelDelegate?
     
+    private let contactsPermissionRequester: PermissionRequestable
     private var items: [ContactCellViewModel] = [
         ContactCellViewModel(name: "Name", lastName: "LastName", imageData: nil)
     ]
+    
+    init(contactsPermissionRequester: PermissionRequestable) {
+        self.contactsPermissionRequester = contactsPermissionRequester
+    }
     
     func getNumberOfItems(in section: Int) -> Int {
         return items.count
