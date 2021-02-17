@@ -47,6 +47,11 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
     
     private func bind() {
         viewModel.isContactsPermissionGranted.bind { [weak self] isGranted in
+            guard isGranted == true else {
+                return
+            }
+            self?.viewModel.getContacts()
+            self?.collectionView.reloadData()
         }
     }
     

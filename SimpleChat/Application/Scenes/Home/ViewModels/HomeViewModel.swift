@@ -38,6 +38,10 @@ final class HomeViewModel {
         })
     }
     
+    func getContacts() {
+        items = addressBook.getContacts().map { ContactCellViewModel($0) }
+    }
+    
     func getNumberOfItems(in section: Int) -> Int {
         return items.count
     }
