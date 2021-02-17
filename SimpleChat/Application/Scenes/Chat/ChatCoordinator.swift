@@ -16,8 +16,11 @@ final class ChatCoordinator: Coordinator {
     
     weak var delegate: ChatCoordinatorDelegate?
     
-    init(router: Router) {
+    private let contact: Contact
+    
+    init(router: Router, contact: Contact) {
         self.router = router
+        self.contact = contact
     }
     
     func start() {
