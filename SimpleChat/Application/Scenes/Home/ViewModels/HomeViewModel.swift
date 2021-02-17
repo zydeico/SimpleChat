@@ -33,7 +33,9 @@ final class HomeViewModel {
     }
     
     func requestContactsPermission() {
-        contactsPermissionRequester.requestPermission(completionHandler: { _, _ in })
+        contactsPermissionRequester.requestPermission(completionHandler: { [weak self] isGranted, _ in
+            self?.isContactsPermissionGranted.value = isGranted
+        })
     }
     
     func getNumberOfItems(in section: Int) -> Int {
