@@ -29,6 +29,7 @@
 		03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BA025DBEF180071C053 /* MockCNContactStore.swift */; };
 		03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64BBD25DC013C0071C053 /* Localizable.strings */; };
 		03E64BCA25DCA3780071C053 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BC925DCA3780071C053 /* Contact.swift */; };
+		03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BE025DCC8F10071C053 /* AddressBookTests.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -91,6 +92,7 @@
 		03E64BA025DBEF180071C053 /* MockCNContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCNContactStore.swift; sourceTree = "<group>"; };
 		03E64BBD25DC013C0071C053 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		03E64BC925DCA3780071C053 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		03E64BE025DCC8F10071C053 /* AddressBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookTests.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		03E64B9625DBED8D0071C053 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				03E64BE025DCC8F10071C053 /* AddressBookTests.swift */,
 				03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */,
 			);
 			path = Contacts;
@@ -683,6 +686,7 @@
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
 				03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */,
 				03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */,
+				03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */,
 				03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
