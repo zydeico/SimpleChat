@@ -32,6 +32,7 @@
 		03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BE025DCC8F10071C053 /* AddressBookTests.swift */; };
 		03E64BF025DCD1540071C053 /* ChatContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BEF25DCD1540071C053 /* ChatContactModel.swift */; };
 		03E64C0925DCEC230071C053 /* MockAddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0825DCEC230071C053 /* MockAddressBook.swift */; };
+		03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */; };
 		03E64C1C25DCF6160071C053 /* MockHomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		03E64BE025DCC8F10071C053 /* AddressBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookTests.swift; sourceTree = "<group>"; };
 		03E64BEF25DCD1540071C053 /* ChatContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactModel.swift; sourceTree = "<group>"; };
 		03E64C0825DCEC230071C053 /* MockAddressBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddressBook.swift; sourceTree = "<group>"; };
+		03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContactsPermissionRequester.swift; sourceTree = "<group>"; };
 		03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModelDelegate.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			children = (
 				03E64C0825DCEC230071C053 /* MockAddressBook.swift */,
 				03E64BA025DBEF180071C053 /* MockCNContactStore.swift */,
+				03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 			files = (
 				03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */,
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
+				03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */,
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
 				03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */,
 				03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */,
