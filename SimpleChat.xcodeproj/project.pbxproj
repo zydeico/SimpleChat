@@ -31,6 +31,7 @@
 		03E64BCA25DCA3780071C053 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BC925DCA3780071C053 /* Contact.swift */; };
 		03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BE025DCC8F10071C053 /* AddressBookTests.swift */; };
 		03E64BF025DCD1540071C053 /* ChatContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BEF25DCD1540071C053 /* ChatContactModel.swift */; };
+		03E64C0125DCEBC70071C053 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0025DCEBC70071C053 /* HomeViewModelTests.swift */; };
 		03E64C0925DCEC230071C053 /* MockAddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0825DCEC230071C053 /* MockAddressBook.swift */; };
 		03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */; };
 		03E64C1C25DCF6160071C053 /* MockHomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */; };
@@ -98,6 +99,7 @@
 		03E64BC925DCA3780071C053 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		03E64BE025DCC8F10071C053 /* AddressBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookTests.swift; sourceTree = "<group>"; };
 		03E64BEF25DCD1540071C053 /* ChatContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactModel.swift; sourceTree = "<group>"; };
+		03E64C0025DCEBC70071C053 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		03E64C0825DCEC230071C053 /* MockAddressBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddressBook.swift; sourceTree = "<group>"; };
 		03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContactsPermissionRequester.swift; sourceTree = "<group>"; };
 		03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				03E64A9825DA1BF10071C053 /* Navigation */,
+				03E64BFD25DCEBA50071C053 /* Scenes */,
 				03E64B9225DBECFC0071C053 /* Services */,
 			);
 			path = Application;
@@ -337,6 +340,30 @@
 				03E64BEF25DCD1540071C053 /* ChatContactModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		03E64BFD25DCEBA50071C053 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				03E64BFE25DCEBB40071C053 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		03E64BFE25DCEBB40071C053 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				03E64BFF25DCEBB90071C053 /* ViewModels */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		03E64BFF25DCEBB90071C053 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				03E64C0025DCEBC70071C053 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		03E64C1925DCF5E20071C053 /* Scenes */ = {
@@ -722,6 +749,7 @@
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 				03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */,
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
+				03E64C0125DCEBC70071C053 /* HomeViewModelTests.swift in Sources */,
 				03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */,
 				03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */,
 				03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */,
