@@ -9,6 +9,6 @@ import Foundation
 
 struct ContactCellViewModel {
     let name: String
-    let lastName: String?
+    let lastName: String
     let imageData: Data?
 }
