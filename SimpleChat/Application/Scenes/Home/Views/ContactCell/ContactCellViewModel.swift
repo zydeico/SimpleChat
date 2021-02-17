@@ -11,6 +11,10 @@ struct ContactCellViewModel {
     let name: String
     let lastName: String
     let imageData: Data?
+    
+    func asContact() -> Contact {
+        return Contact(name: name, lastName: lastName, imageData: imageData)
+    }
 }
 
 extension ContactCellViewModel {

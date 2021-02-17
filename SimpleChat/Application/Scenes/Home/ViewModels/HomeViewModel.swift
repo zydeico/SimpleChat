@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
-    func didSelectContact()
+    func didSelectContact(_ contact: Contact)
 }
 
 final class HomeViewModel {
@@ -51,6 +51,7 @@ final class HomeViewModel {
     }
     
     func selectItem(at indexPath: IndexPath) {
-        delegate?.didSelectContact()
+        let item = items[indexPath.item]
+        delegate?.didSelectContact(item.asContact())
     }
 }

@@ -30,8 +30,8 @@ final class HomeCoordinator: Coordinator {
         router.setRoot([vc])
     }
     
-    private func startChat() {
-        let coordinator = ChatCoordinator(router: router)
+    private func startChat(with contact: Contact) {
+        let coordinator = ChatCoordinator(router: router, contact: contact)
         coordinator.delegate = self
         coordinatorAllocator.allocate(coordinator)
         coordinator.start()
@@ -41,8 +41,8 @@ final class HomeCoordinator: Coordinator {
 // MARK: - View model delegates
 
 extension HomeCoordinator: HomeViewModelDelegate {
-    func didSelectContact() {
-        startChat()
+    func didSelectContact(_ contact: Contact) {
+        startChat(with: contact)
     }
 }
 

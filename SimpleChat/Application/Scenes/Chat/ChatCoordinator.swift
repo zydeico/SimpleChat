@@ -16,8 +16,11 @@ final class ChatCoordinator: Coordinator {
     
     weak var delegate: ChatCoordinatorDelegate?
     
-    init(router: Router) {
+    private let contact: Contact
+    
+    init(router: Router, contact: Contact) {
         self.router = router
+        self.contact = contact
     }
     
     func start() {
@@ -26,7 +29,7 @@ final class ChatCoordinator: Coordinator {
     
     private func showChatScreen() {
         let vc = ChatViewController.instantiate()
-        let vm = ChatViewModel()
+        let vm = ChatViewModel(contact: contact)
         vm.delegate = self
         vc.viewModel = vm
         router.push(vc)

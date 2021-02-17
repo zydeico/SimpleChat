@@ -13,6 +13,15 @@ protocol ChatViewModelDelegate: AnyObject {
 
 final class ChatViewModel {
     weak var delegate: ChatViewModelDelegate?
+    var title: String {
+        return contact.name
+    }
+    
+    private let contact: ChatContactModel
+    
+    init(contact: Contact) {
+        self.contact = ChatContactModel(contact)
+    }
     
     func tapBack() {
         delegate?.didTapBack()
