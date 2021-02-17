@@ -20,6 +20,7 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        bind()
         viewModel.requestContactsPermission()
     }
     
@@ -42,6 +43,16 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    private func bind() {
+        viewModel.isContactsPermissionGranted.bind { [weak self] isGranted in
+            guard isGranted == true else {
+                return
+            }
+            self?.viewModel.getContacts()
+            self?.collectionView.reloadData()
+        }
     }
     
     private func showRequestManualContactsPermissionAlertIfNeeded() {
