@@ -51,6 +51,7 @@ final class HomeViewModel {
     }
     
     func selectItem(at indexPath: IndexPath) {
-        delegate?.didSelectContact()
+        let item = items[indexPath.item]
+        delegate?.didSelectContact(item.asContact())
     }
 }

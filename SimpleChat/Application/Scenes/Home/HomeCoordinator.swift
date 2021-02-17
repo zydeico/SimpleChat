@@ -41,8 +41,7 @@ final class HomeCoordinator: Coordinator {
 // MARK: - View model delegates
 
 extension HomeCoordinator: HomeViewModelDelegate {
-    func didSelectContact() {
-        startChat()
+    func didSelectContact(_ contact: Contact) {
     }
 }
 
