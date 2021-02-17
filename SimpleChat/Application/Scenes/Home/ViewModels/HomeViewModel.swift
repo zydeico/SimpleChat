@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HomeViewModelDelegate: AnyObject {
-    func didSelectContact()
+    func didSelectContact(_ contact: Contact)
 }
 
 final class HomeViewModel {
