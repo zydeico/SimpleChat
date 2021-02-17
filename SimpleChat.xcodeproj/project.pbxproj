@@ -22,6 +22,7 @@
 		03E64B6525DBC0A40071C053 /* PermissionRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */; };
 		03E64B6F25DBC1AA0071C053 /* ContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */; };
 		03E64B7725DBC61C0071C053 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64B7625DBC61C0071C053 /* InfoPlist.strings */; };
+		03E64B7C25DBC8620071C053 /* AddressBookProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B7B25DBC8620071C053 /* AddressBookProvider.swift */; };
 		03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */; };
 		03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BA025DBEF180071C053 /* MockCNContactStore.swift */; };
 		03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64BBD25DC013C0071C053 /* Localizable.strings */; };
@@ -81,6 +82,7 @@
 		03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestable.swift; sourceTree = "<group>"; };
 		03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequester.swift; sourceTree = "<group>"; };
 		03E64B7625DBC61C0071C053 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		03E64B7B25DBC8620071C053 /* AddressBookProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookProvider.swift; sourceTree = "<group>"; };
 		03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequesterTests.swift; sourceTree = "<group>"; };
 		03E64BA025DBEF180071C053 /* MockCNContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCNContactStore.swift; sourceTree = "<group>"; };
 		03E64BBD25DC013C0071C053 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */,
+				03E64B7B25DBC8620071C053 /* AddressBookProvider.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03E64BCA25DCA3780071C053 /* Contact.swift in Sources */,
+				03E64B7C25DBC8620071C053 /* AddressBookProvider.swift in Sources */,
 				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
 				03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */,
 				03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */,
