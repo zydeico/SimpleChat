@@ -16,6 +16,7 @@ final class HomeViewModel {
     let contactsPermissionAlertTitle = NSLocalizedString("permissions.contacts.alert.title", comment: "")
     let contactsPermissionAlertMessage = NSLocalizedString("permissions.contacts.alert.message", comment: "")
     let contactsPermissionAlertButtonTitle = NSLocalizedString("common.ok", comment: "")
+    let isContactsPermissionGranted = Observable<Bool>()
     
     weak var delegate: HomeViewModelDelegate?
     var shouldRequestManualContactsPermission: Bool {
