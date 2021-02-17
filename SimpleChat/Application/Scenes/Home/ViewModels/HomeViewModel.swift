@@ -26,9 +26,11 @@ final class HomeViewModel {
     private var items: [ContactCellViewModel] = [
         ContactCellViewModel(name: "Name", lastName: "LastName", imageData: nil)
     ]
+    private let addressBook: AddressBookProvider
     
-    init(contactsPermissionRequester: PermissionRequestable) {
+    init(contactsPermissionRequester: PermissionRequestable, addressBook: AddressBookProvider) {
         self.contactsPermissionRequester = contactsPermissionRequester
+        self.addressBook = addressBook
     }
     
     func requestContactsPermission() {
