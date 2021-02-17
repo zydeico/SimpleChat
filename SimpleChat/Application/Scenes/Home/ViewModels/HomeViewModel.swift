@@ -23,10 +23,8 @@ final class HomeViewModel {
     }
     
     private let contactsPermissionRequester: PermissionRequestable
-    private var items: [ContactCellViewModel] = [
-        ContactCellViewModel(name: "Name", lastName: "LastName", imageData: nil)
-    ]
     private let addressBook: AddressBookProvider
+    private var items: [ContactCellViewModel] = []
     
     init(contactsPermissionRequester: PermissionRequestable, addressBook: AddressBookProvider) {
         self.contactsPermissionRequester = contactsPermissionRequester
