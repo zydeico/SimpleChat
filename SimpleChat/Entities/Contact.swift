@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Contact {
+struct Contact: Equatable {
     let name: String
     let lastName: String
     let imageData: Data?
