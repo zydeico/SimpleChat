@@ -9,8 +9,8 @@ import XCTest
 @testable import SimpleChat
 
 final class ContactsPermissionRequesterTests: XCTestCase {
-    var sut: ContactsPermissionRequester!
-    var contactStore: MockCNContactStore!
+    private var sut: ContactsPermissionRequester!
+    private var contactStore: MockCNContactStore!
     
     override func setUp() {
         super.setUp()

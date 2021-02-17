@@ -9,8 +9,8 @@ import XCTest
 @testable import SimpleChat
 
 final class CoordinatorAllocatorTests: XCTestCase {
-    let coordinator = DummyCoordinator()
-    var sut: CoordinatorAllocator!
+    private let coordinator = DummyCoordinator()
+    private var sut: CoordinatorAllocator!
 
     override func setUp() {
         super.setUp()
@@ -22,13 +22,13 @@ final class CoordinatorAllocatorTests: XCTestCase {
         sut = nil
     }
 
-    func testAllocateShouldAppendCoordinator() {
+    func testAllocateAppendsCoordinator() {
         sut.allocate(coordinator)
         
         XCTAssertFalse(sut.childCoordinators.isEmpty)
     }
     
-    func testDeallocateShouldRemoveCoordinator() {
+    func testDeallocateRemovesCoordinator() {
         sut.allocate(coordinator)
         sut.deallocate(coordinator)
         

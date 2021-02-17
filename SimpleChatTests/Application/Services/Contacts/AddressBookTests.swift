@@ -9,8 +9,8 @@ import XCTest
 @testable import SimpleChat
 
 final class AddressBookTests: XCTestCase {
-    var sut: AddressBook!
-    var contactStore: MockCNContactStore!
+    private var sut: AddressBook!
+    private var contactStore: MockCNContactStore!
     
     override func setUp() {
         super.setUp()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContactCellViewModel {
+struct ContactCellViewModel: Equatable {
     let name: String
     let lastName: String
     let imageData: Data?
