@@ -39,7 +39,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     private func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 0.0)
+        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
         layout.minimumLineSpacing = 0.0
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
@@ -100,6 +100,13 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         return CGSize(width: width, height: height + ChatCollectionViewCell.padding)
     }
     
+    private func getCollectionViewSectionInsets() -> UIEdgeInsets {
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            return layout.sectionInset
+        }
+        return .zero
+    }
+    
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
     }
@@ -130,7 +137,8 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
 extension ChatViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = calculateItemSize(at: indexPath).height
-        return CGSize(width: view.frame.width, height: height)
+        let insets = getCollectionViewSectionInsets()
+        return CGSize(width: view.frame.width - (insets.left + insets.right), height: height)
     }
 }
 
@@ -149,7 +157,7 @@ extension ChatViewController: UICollectionViewDataSource {
         cell.viewModel = viewModel.getCellViewModel(at: indexPath)
         cell.setWidth(width)
         if viewModel.getSentByUser(at: indexPath) {
-            cell.setOriginX(view.frame.width - width)
+            cell.setOriginX(view.frame.width - width - getCollectionViewSectionInsets().right)
         }
         return cell
     }
