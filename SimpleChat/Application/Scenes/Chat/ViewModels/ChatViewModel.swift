@@ -18,6 +18,7 @@ final class ChatViewModel {
     }
     
     private let contact: ChatContactModel
+    private var items: [ChatCellViewModel] = []
     
     init(contact: Contact) {
         self.contact = ChatContactModel(contact)
