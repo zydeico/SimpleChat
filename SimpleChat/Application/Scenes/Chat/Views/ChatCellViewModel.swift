@@ -10,3 +10,9 @@ import Foundation
 struct ChatCellViewModel {
     let text: String
 }
+
+extension ChatCellViewModel {
+    init(_ chat: ChatModel) {
+        self.text = chat.message
+    }
+}
