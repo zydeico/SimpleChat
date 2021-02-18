@@ -13,6 +13,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var sendButton: UIButton!
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     
     var viewModel: ChatViewModel!
     

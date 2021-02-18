@@ -69,6 +69,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="1jo-wz-Ud6" id="ngR-OZ-esb"/>
                         <outlet property="collectionView" destination="ndg-fT-w7f" id="voT-iJ-hcH"/>
                         <outlet property="sendButton" destination="gc4-SF-c05" id="ww8-76-O2p"/>
                         <outlet property="textView" destination="M57-Fn-WDw" id="4KD-GN-jwq"/>
