@@ -24,6 +24,10 @@ final class ChatViewModel {
         self.contact = ChatContactModel(contact)
     }
     
+    
+    func getCellViewModel(at indexPath: IndexPath) -> ChatCellViewModel {
+        return items[indexPath.item]
+    }
     func tapBack() {
         delegate?.didTapBack()
     }

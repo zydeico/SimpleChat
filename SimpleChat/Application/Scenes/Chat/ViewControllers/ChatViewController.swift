@@ -54,6 +54,20 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         sendButton.setImage(image, for: .normal)
         sendButton.setTitle("", for: .normal)
     }
+    
+    private func calculateItemSize(at indexPath: IndexPath) -> CGSize {
+        let size = CGSize(width: view.frame.width * 0.7, height: CGFloat.greatestFiniteMagnitude)
+        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
+        let text = viewModel.getCellViewModel(at: indexPath).text
+        let boundingRect = NSString(string: text).boundingRect(with: size,
+                                                               options: .usesLineFragmentOrigin,
+                                                               attributes: attributes,
+                                                               context: nil)
+        let height = ceil(boundingRect.height)
+        let width = ceil(boundingRect.width)
+        return CGSize(width: width, height: height + ChatCollectionViewCell.padding)
+    }
+    
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
     }
@@ -62,4 +76,8 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension ChatViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = calculateItemSize(at: indexPath).height
+        return CGSize(width: view.frame.width, height: height)
+    }
 }
