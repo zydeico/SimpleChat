@@ -11,11 +11,23 @@ final class ChatCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var label: UILabel!
     
+    
+    var viewModel: ChatCellViewModel? {
+        didSet {
+            setUpModel()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpLayer()
         setUpMainView()
         setUpLabel()
+    }
+    
+    
+    private func setUpModel() {
+        label.text = viewModel?.text
     }
     
     private func setUpLayer() {
