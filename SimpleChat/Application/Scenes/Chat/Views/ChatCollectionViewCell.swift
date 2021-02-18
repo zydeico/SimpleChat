@@ -26,6 +26,13 @@ final class ChatCollectionViewCell: UICollectionViewCell {
         setUpLabel()
     }
     
+    func setWidth(_ width: CGFloat) {
+        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: width + Self.padding, height: frame.height)
+    }
+    
+    func setOriginX(_ x: CGFloat) {
+        frame = CGRect(x: x - Self.padding, y: frame.origin.y, width: frame.width, height: frame.height)
+    }
     
     private func setUpModel() {
         label.text = viewModel?.text

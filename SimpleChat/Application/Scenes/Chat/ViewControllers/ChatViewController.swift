@@ -94,7 +94,13 @@ extension ChatViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? ChatCollectionViewCell else {
             fatalError("Could not dequeue cell.")
         }
+        let width = calculateItemSize(at: indexPath).width
         cell.viewModel = viewModel.getCellViewModel(at: indexPath)
+        cell.setWidth(width)
+        
+        if indexPath.item % 3 != 0 {
+            cell.setOriginX(view.frame.width - width)
+        }
         return cell
     }
 }
