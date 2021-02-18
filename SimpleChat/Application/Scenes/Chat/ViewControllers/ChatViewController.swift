@@ -22,6 +22,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        setUpTextView()
     }
     
     private func setUpNavigationBar() {
@@ -37,6 +38,12 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         layout.minimumLineSpacing = 0.0
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+    }
+    
+    private func setUpTextView() {
+        textView.text = ""
+        textView.layer.borderWidth = 1.0
+        textView.layer.borderColor = UIColor(named: "Border")?.cgColor
     }
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
