@@ -25,6 +25,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         setUpTextView()
         setUpSendButton()
         setUpKeyboardToolbar()
+        bind()
     }
     
     private func setUpNavigationBar() {
@@ -64,6 +65,15 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         toolbar.sizeToFit()
         textView.inputAccessoryView = toolbar
     }
+    
+    private func bind() {
+        viewModel.isMessageCountUpdated.bind { [weak self] totalMessages in
+            guard let total = totalMessages else {
+                return
+            }
+            self?.collectionView.reloadData()
+            self?.collectionView.scrollToItem(at: IndexPath(item: total - 1, section: 0), at: .bottom, animated: true)
+        }
     }
     
     private func calculateItemSize(at indexPath: IndexPath) -> CGSize {
