@@ -39,6 +39,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         layout.minimumLineSpacing = 0.0
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+        collectionView.delegate = self
     }
     
     private func setUpTextView() {
@@ -56,4 +57,9 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
     }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension ChatViewController: UICollectionViewDelegateFlowLayout {
 }
