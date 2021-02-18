@@ -100,7 +100,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     }
     
     @objc private func sendButtonTapped() {
-        viewModel.sendMessage(text: textView.text)
+        viewModel.sendMessage(withText: textView.text)
         textView.text = ""
     }
 }
