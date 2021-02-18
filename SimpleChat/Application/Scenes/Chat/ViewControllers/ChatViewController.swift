@@ -23,6 +23,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        setUpCollectionViewGestures()
         setUpTextView()
         setUpSendButton()
         setUpKeyboardToolbar()
@@ -45,6 +46,11 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    private func setUpCollectionViewGestures() {
+        let gesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        collectionView.addGestureRecognizer(gesture)
     }
     
     private func setUpTextView() {
