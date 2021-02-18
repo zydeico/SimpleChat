@@ -13,6 +13,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var sendButton: UIButton!
+    @IBOutlet private weak var bottomConstraint: NSLayoutConstraint!
     
     var viewModel: ChatViewModel!
     
@@ -22,9 +23,10 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         super.viewDidLoad()
         setUpNavigationBar()
         setUpCollectionView()
+        setUpCollectionViewGestures()
         setUpTextView()
         setUpSendButton()
-        setUpKeyboardToolbar()
+        setUpKeyboardNotifications()
         bind()
     }
     
@@ -45,6 +47,11 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         collectionView.dataSource = self
     }
     
+    private func setUpCollectionViewGestures() {
+        let gesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        collectionView.addGestureRecognizer(gesture)
+    }
+    
     private func setUpTextView() {
         textView.text = ""
         textView.layer.borderWidth = 1.0
@@ -59,13 +66,15 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
     }
     
-    private func setUpKeyboardToolbar() {
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
-        toolbar.items = [flexSpace, doneButton]
-        toolbar.sizeToFit()
-        textView.inputAccessoryView = toolbar
+    private func setUpKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
     private func bind() {
@@ -95,13 +104,21 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         viewModel.tapBack()
     }
     
-    @objc private func doneButtonTapped() {
-        view.endEditing(true)
-    }
-    
     @objc private func sendButtonTapped() {
         viewModel.sendMessage(withText: textView.text)
         textView.text = ""
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        let offset = UIApplication.shared.windows.first(where: \.isKeyWindow)?.safeAreaInsets.bottom ?? 0.0
+        bottomConstraint.constant = keyboardRect.height - offset
+    }
+    
+    @objc private func keyboardWillHide() {
+        bottomConstraint.constant = 0
     }
 }
 
