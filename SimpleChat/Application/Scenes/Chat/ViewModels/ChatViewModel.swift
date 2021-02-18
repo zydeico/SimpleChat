@@ -44,6 +44,10 @@ final class ChatViewModel {
         scheduleAutoReplyMessage(withText: t)
     }
     
+    func isMessageValid(withText text: String) -> Bool {
+        return !text.isEmpty
+    }
+    
     private func addUserMessage(text: String) {
         items.append(ChatModel(message: text, isSentByUser: true))
     }

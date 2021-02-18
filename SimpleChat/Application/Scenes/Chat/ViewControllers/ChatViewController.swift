@@ -105,6 +105,9 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     }
     
     @objc private func sendButtonTapped() {
+        guard viewModel.isMessageValid(withText: textView.text) else {
+            return
+        }
         viewModel.sendMessage(withText: textView.text)
         textView.text = ""
     }
