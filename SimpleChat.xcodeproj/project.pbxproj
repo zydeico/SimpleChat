@@ -37,6 +37,7 @@
 		03E64C1C25DCF6160071C053 /* MockHomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */; };
 		03E64C2C25DD02640071C053 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */; };
 		03E64C2D25DD02640071C053 /* ChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */; };
+		03E64C3525DD05770071C053 /* ChatCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C3425DD05770071C053 /* ChatCellViewModel.swift */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -107,6 +108,7 @@
 		03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModelDelegate.swift; sourceTree = "<group>"; };
 		03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		03E64C3425DD05770071C053 /* ChatCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellViewModel.swift; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 		03E64C2925DD02380071C053 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03E64C3425DD05770071C053 /* ChatCellViewModel.swift */,
 				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
 				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
 			);
@@ -729,6 +732,7 @@
 				03E64B8A25DBE5BF0071C053 /* Observable.swift in Sources */,
 				03E64B7C25DBC8620071C053 /* AddressBookProvider.swift in Sources */,
 				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
+				03E64C3525DD05770071C053 /* ChatCellViewModel.swift in Sources */,
 				03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */,
 				03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */,
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
