@@ -37,6 +37,11 @@ final class ChatViewModel {
         return ChatCellViewModel(items[indexPath.item])
     }
     
+    func sendMessage(text: String) {
+        items.append(ChatModel(message: text, isSentByUser: true))
+        isMessageCountUpdated.value = items.count
+    }
+    
     func tapBack() {
         delegate?.didTapBack()
     }

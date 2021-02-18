@@ -56,6 +56,8 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         let image = UIImage(systemName: "arrow.up.circle.fill", withConfiguration: configuration)
         sendButton.setImage(image, for: .normal)
         sendButton.setTitle("", for: .normal)
+        sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+    }
     
     private func setUpKeyboardToolbar() {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
@@ -95,6 +97,11 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     @objc private func doneButtonTapped() {
         view.endEditing(true)
+    }
+    
+    @objc private func sendButtonTapped() {
+        viewModel.sendMessage(text: textView.text)
+        textView.text = ""
     }
 }
 
