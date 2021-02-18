@@ -23,6 +23,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         setUpNavigationBar()
         setUpCollectionView()
         setUpTextView()
+        setUpSendButton()
     }
     
     private func setUpNavigationBar() {
@@ -44,6 +45,13 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         textView.text = ""
         textView.layer.borderWidth = 1.0
         textView.layer.borderColor = UIColor(named: "Border")?.cgColor
+    }
+    
+    private func setUpSendButton() {
+        let configuration = UIImage.SymbolConfiguration(weight: .semibold)
+        let image = UIImage(systemName: "arrow.up.circle.fill", withConfiguration: configuration)
+        sendButton.setImage(image, for: .normal)
+        sendButton.setTitle("", for: .normal)
     }
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
