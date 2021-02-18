@@ -18,9 +18,22 @@ final class ChatViewModel {
     }
     
     private let contact: ChatContactModel
+    private var items: [ChatModel] = []
     
     init(contact: Contact) {
         self.contact = ChatContactModel(contact)
+    }
+    
+    func getNumberOfItems(in section: Int) -> Int {
+        return items.count
+    }
+    
+    func getSentByUser(at indexPath: IndexPath) -> Bool {
+        return items[indexPath.item].isSentByUser
+    }
+    
+    func getCellViewModel(at indexPath: IndexPath) -> ChatCellViewModel {
+        return ChatCellViewModel(items[indexPath.item])
     }
     
     func tapBack() {
