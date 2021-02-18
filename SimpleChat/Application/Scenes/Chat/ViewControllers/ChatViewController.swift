@@ -10,6 +10,10 @@ import UIKit
 final class ChatViewController: UIViewController, StoryboardInstanceable {
     static var storyboardName: String = "Chat"
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var sendButton: UIButton!
+    
     var viewModel: ChatViewModel!
     
     override func viewDidLoad() {
