@@ -37,7 +37,7 @@ final class ChatViewModel {
         return ChatCellViewModel(items[indexPath.item])
     }
     
-    func sendMessage(text: String) {
+    func sendMessage(withText text: String) {
         let t = text.trimmingCharacters(in: .whitespacesAndNewlines)
         addUserMessage(text: t)
         isMessageCountUpdated.value = items.count
