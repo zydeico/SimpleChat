@@ -35,6 +35,8 @@
 		03E64C0925DCEC230071C053 /* MockAddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0825DCEC230071C053 /* MockAddressBook.swift */; };
 		03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */; };
 		03E64C1C25DCF6160071C053 /* MockHomeViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */; };
+		03E64C2C25DD02640071C053 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */; };
+		03E64C2D25DD02640071C053 /* ChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */; };
 		03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0B38A25D21CC800694657 /* AppDelegate.swift */; };
 		03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39325D21CCA00694657 /* Assets.xcassets */; };
 		03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B39525D21CCA00694657 /* Launch.storyboard */; };
@@ -103,6 +105,8 @@
 		03E64C0825DCEC230071C053 /* MockAddressBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddressBook.swift; sourceTree = "<group>"; };
 		03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockContactsPermissionRequester.swift; sourceTree = "<group>"; };
 		03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeViewModelDelegate.swift; sourceTree = "<group>"; };
+		03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCollectionViewCell.xib; sourceTree = "<group>"; };
 		03F0B38725D21CC800694657 /* SimpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F0B38A25D21CC800694657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03F0B39325D21CCA00694657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				03E64BEE25DCD1410071C053 /* Models */,
 				03E64B3625DB90620071C053 /* ViewControllers */,
 				03E64B3725DB906B0071C053 /* ViewModels */,
+				03E64C2925DD02380071C053 /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -380,6 +385,15 @@
 				03E64C1B25DCF6160071C053 /* MockHomeViewModelDelegate.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		03E64C2925DD02380071C053 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
+				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		03F0B37E25D21CC700694657 = {
@@ -664,6 +678,7 @@
 				03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */,
 				03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */,
 				03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */,
+				03E64C2D25DD02640071C053 /* ChatCollectionViewCell.xib in Resources */,
 				03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +732,7 @@
 				03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */,
 				03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */,
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
+				03E64C2C25DD02640071C053 /* ChatCollectionViewCell.swift in Sources */,
 				03E64B1825DB73EB0071C053 /* ContactCellViewModel.swift in Sources */,
 				03F0B51425D3AC0D00694657 /* UIViewController+Presentable.swift in Sources */,
 				03E64B6F25DBC1AA0071C053 /* ContactsPermissionRequester.swift in Sources */,
