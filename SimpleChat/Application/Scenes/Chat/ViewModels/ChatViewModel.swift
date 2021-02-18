@@ -29,7 +29,7 @@ final class ChatViewModel {
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> ChatCellViewModel {
-        return items[indexPath.item]
+        return ChatCellViewModel(items[indexPath.item])
     }
     
     func tapBack() {
