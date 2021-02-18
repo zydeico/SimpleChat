@@ -11,6 +11,7 @@ final class ChatCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var mainView: UIView!
     @IBOutlet private weak var label: UILabel!
     
+    static let padding: CGFloat = 30.0
     
     var viewModel: ChatCellViewModel? {
         didSet {
