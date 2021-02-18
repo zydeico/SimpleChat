@@ -40,6 +40,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         collectionView.collectionViewLayout = layout
         collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     private func setUpTextView() {
@@ -79,5 +80,21 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = calculateItemSize(at: indexPath).height
         return CGSize(width: view.frame.width, height: height)
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension ChatViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.getNumberOfItems(in: section)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? ChatCollectionViewCell else {
+            fatalError("Could not dequeue cell.")
+        }
+        cell.viewModel = viewModel.getCellViewModel(at: indexPath)
+        return cell
     }
 }
