@@ -38,8 +38,26 @@ final class ChatViewModel {
     }
     
     func sendMessage(text: String) {
-        items.append(ChatModel(message: text, isSentByUser: true))
+        let t = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        addUserMessage(text: t)
         isMessageCountUpdated.value = items.count
+        scheduleAutoReplyMessage(withText: t)
+    }
+    
+    private func addUserMessage(text: String) {
+        items.append(ChatModel(message: text, isSentByUser: true))
+    }
+    
+    private func addAutoReplyMessage(text: String) {
+        items.append(ChatModel(message: text, isSentByUser: false))
+    }
+    
+    private func scheduleAutoReplyMessage(withText text: String) {
+        let seconds = Double(arc4random_uniform(5))
+        DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + seconds, execute: { [weak self] in
+            self?.addAutoReplyMessage(text: String(text.reversed()))
+            self?.isMessageCountUpdated.value = self?.items.count
+        })
     }
     
     func tapBack() {
