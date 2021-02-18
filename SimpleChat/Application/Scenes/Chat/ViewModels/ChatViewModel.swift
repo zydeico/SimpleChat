@@ -12,6 +12,7 @@ protocol ChatViewModelDelegate: AnyObject {
 }
 
 final class ChatViewModel {
+    let isMessageCountUpdated = Observable<Int>()
     weak var delegate: ChatViewModelDelegate?
     var title: String {
         return contact.name
