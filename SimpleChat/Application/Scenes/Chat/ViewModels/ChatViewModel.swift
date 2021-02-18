@@ -12,6 +12,7 @@ protocol ChatViewModelDelegate: AnyObject {
 }
 
 final class ChatViewModel {
+    let isMessageCountUpdated = Observable<Int>()
     weak var delegate: ChatViewModelDelegate?
     var title: String {
         return contact.name
@@ -34,6 +35,11 @@ final class ChatViewModel {
     
     func getCellViewModel(at indexPath: IndexPath) -> ChatCellViewModel {
         return ChatCellViewModel(items[indexPath.item])
+    }
+    
+    func sendMessage(text: String) {
+        items.append(ChatModel(message: text, isSentByUser: true))
+        isMessageCountUpdated.value = items.count
     }
     
     func tapBack() {

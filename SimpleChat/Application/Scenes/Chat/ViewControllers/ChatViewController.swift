@@ -24,6 +24,8 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         setUpCollectionView()
         setUpTextView()
         setUpSendButton()
+        setUpKeyboardToolbar()
+        bind()
     }
     
     private func setUpNavigationBar() {
@@ -54,6 +56,26 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         let image = UIImage(systemName: "arrow.up.circle.fill", withConfiguration: configuration)
         sendButton.setImage(image, for: .normal)
         sendButton.setTitle("", for: .normal)
+        sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setUpKeyboardToolbar() {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
+        toolbar.items = [flexSpace, doneButton]
+        toolbar.sizeToFit()
+        textView.inputAccessoryView = toolbar
+    }
+    
+    private func bind() {
+        viewModel.isMessageCountUpdated.bind { [weak self] totalMessages in
+            guard let total = totalMessages else {
+                return
+            }
+            self?.collectionView.reloadData()
+            self?.collectionView.scrollToItem(at: IndexPath(item: total - 1, section: 0), at: .bottom, animated: true)
+        }
     }
     
     private func calculateItemSize(at indexPath: IndexPath) -> CGSize {
@@ -71,6 +93,15 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
+    }
+    
+    @objc private func doneButtonTapped() {
+        view.endEditing(true)
+    }
+    
+    @objc private func sendButtonTapped() {
+        viewModel.sendMessage(text: textView.text)
+        textView.text = ""
     }
 }
 
