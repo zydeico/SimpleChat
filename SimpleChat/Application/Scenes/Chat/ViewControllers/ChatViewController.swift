@@ -97,8 +97,7 @@ extension ChatViewController: UICollectionViewDataSource {
         let width = calculateItemSize(at: indexPath).width
         cell.viewModel = viewModel.getCellViewModel(at: indexPath)
         cell.setWidth(width)
-        
-        if indexPath.item % 3 != 0 {
+        if viewModel.getSentByUser(at: indexPath) {
             cell.setOriginX(view.frame.width - width)
         }
         return cell

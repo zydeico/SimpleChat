@@ -28,6 +28,10 @@ final class ChatViewModel {
         return items.count
     }
     
+    func getSentByUser(at indexPath: IndexPath) -> Bool {
+        return items[indexPath.item].isSentByUser
+    }
+    
     func getCellViewModel(at indexPath: IndexPath) -> ChatCellViewModel {
         return ChatCellViewModel(items[indexPath.item])
     }
