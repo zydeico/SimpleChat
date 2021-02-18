@@ -26,6 +26,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         setUpTextView()
         setUpSendButton()
         setUpKeyboardToolbar()
+        setUpKeyboardNotifications()
         bind()
     }
     
@@ -58,6 +59,17 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         sendButton.setImage(image, for: .normal)
         sendButton.setTitle("", for: .normal)
         sendButton.addTarget(self, action: #selector(sendButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setUpKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     
     private func setUpKeyboardToolbar() {
@@ -103,6 +115,18 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     @objc private func sendButtonTapped() {
         viewModel.sendMessage(withText: textView.text)
         textView.text = ""
+    }
+    
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {
+            return
+        }
+        let offset = UIApplication.shared.windows.first(where: \.isKeyWindow)?.safeAreaInsets.bottom ?? 0.0
+        bottomConstraint.constant = keyboardRect.height - offset
+    }
+    
+    @objc private func keyboardWillHide() {
+        bottomConstraint.constant = 0
     }
 }
 
