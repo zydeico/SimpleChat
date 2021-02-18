@@ -16,9 +16,12 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     var viewModel: ChatViewModel!
     
+    private let cellReuseIdentifier = "ChatCollectionViewCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationBar()
+        setUpCollectionView()
     }
     
     private func setUpNavigationBar() {
@@ -28,6 +31,13 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         navigationItem.title = viewModel.title
     }
     
+    private func setUpCollectionView() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 0.0, bottom: 10.0, right: 0.0)
+        layout.minimumLineSpacing = 0.0
+        collectionView.collectionViewLayout = layout
+        collectionView.register(UINib(nibName: cellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
+    }
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
     }
