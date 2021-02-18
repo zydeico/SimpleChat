@@ -26,7 +26,6 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
         setUpCollectionViewGestures()
         setUpTextView()
         setUpSendButton()
-        setUpKeyboardToolbar()
         setUpKeyboardNotifications()
         bind()
     }
@@ -78,15 +77,6 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
                                                object: nil)
     }
     
-    private func setUpKeyboardToolbar() {
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
-        toolbar.items = [flexSpace, doneButton]
-        toolbar.sizeToFit()
-        textView.inputAccessoryView = toolbar
-    }
-    
     private func bind() {
         viewModel.isMessageCountUpdated.bind { [weak self] totalMessages in
             guard let total = totalMessages else {
@@ -112,10 +102,6 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     @objc private func leftBarButtonTapped() {
         viewModel.tapBack()
-    }
-    
-    @objc private func doneButtonTapped() {
-        view.endEditing(true)
     }
     
     @objc private func sendButtonTapped() {
