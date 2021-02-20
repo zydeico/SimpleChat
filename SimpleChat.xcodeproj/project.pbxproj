@@ -279,9 +279,9 @@
 		03E64B6325DBC0620071C053 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */,
 				03E64B7B25DBC8620071C053 /* AddressBookProvider.swift */,
 				03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */,
+				03E64B6425DBC0A40071C053 /* PermissionRequestable.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
