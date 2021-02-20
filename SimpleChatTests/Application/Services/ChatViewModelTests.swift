@@ -102,4 +102,10 @@ final class ChatViewModelTests: XCTestCase {
     func testIsMessageValidWhenInputIsEmptyReturnsFalse() {
         XCTAssertFalse(sut.isMessageValid(withText: ""))
     }
+    
+    func testTapBackCallsDidTapBackDelegateMethod() {
+        sut.tapBack()
+        
+        XCTAssertTrue(delegate.isDidTapCalled)
+    }
 }
