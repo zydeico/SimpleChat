@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatCellViewModel {
+struct ChatCellViewModel: Equatable {
     let text: String
 }
 
