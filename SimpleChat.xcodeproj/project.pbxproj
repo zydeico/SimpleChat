@@ -208,6 +208,16 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		03541B5125E0D596003D5A73 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				03E64C3425DD05770071C053 /* ChatCellViewModel.swift */,
+				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
+				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
 		03E64A7325DA07A10071C053 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,9 +455,7 @@
 		03E64C2925DD02380071C053 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03E64C3425DD05770071C053 /* ChatCellViewModel.swift */,
-				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
-				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
+				03541B5125E0D596003D5A73 /* ChatCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
