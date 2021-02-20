@@ -10,6 +10,7 @@
 		03541AEF25E0C242003D5A73 /* AutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */; };
 		03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */; };
 		03541B1325E0CA00003D5A73 /* ReverseAutoResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */; };
+		03541B2925E0CC41003D5A73 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B2825E0CC41003D5A73 /* ChatViewModelTests.swift */; };
 		03541B3225E0CD03003D5A73 /* MockAutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */; };
 		03541B3E25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
@@ -87,6 +88,7 @@
 		03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResponseProvider.swift; sourceTree = "<group>"; };
 		03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponder.swift; sourceTree = "<group>"; };
 		03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponderTests.swift; sourceTree = "<group>"; };
+		03541B2825E0CC41003D5A73 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModelTests.swift; path = SimpleChatTests/Application/Services/ChatViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAutoResponseProvider.swift; sourceTree = "<group>"; };
 		03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatViewModelDelegate.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
@@ -174,6 +176,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03541B2625E0CC29003D5A73 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				03541B2725E0CC32003D5A73 /* ViewModels */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		03541B2725E0CC32003D5A73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				03541B2825E0CC41003D5A73 /* ChatViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		03541B3025E0CC72003D5A73 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +403,7 @@
 		03E64BFD25DCEBA50071C053 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				03541B2625E0CC29003D5A73 /* Chat */,
 				03E64BFE25DCEBB40071C053 /* Home */,
 			);
 			path = Scenes;
@@ -815,6 +834,7 @@
 				03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */,
 				03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */,
 				03E64C1C25DCF6160071C053 /* MockHomeViewModelDelegate.swift in Sources */,
+				03541B2925E0CC41003D5A73 /* ChatViewModelTests.swift in Sources */,
 				03E64C0925DCEC230071C053 /* MockAddressBook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
