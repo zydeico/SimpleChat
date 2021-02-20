@@ -195,7 +195,9 @@
 		03541B3025E0CC72003D5A73 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03E64C0825DCEC230071C053 /* MockAddressBook.swift */,
 				03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */,
+				03E64B9F25DBEDFB0071C053 /* Contacts */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -263,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				03541B3025E0CC72003D5A73 /* Services */,
-				03E64B9F25DBEDFB0071C053 /* Contacts */,
 				03E64ACA25DA36840071C053 /* Navigation */,
 				03E64C1925DCF5E20071C053 /* Scenes */,
 			);
@@ -370,7 +371,6 @@
 		03E64B9F25DBEDFB0071C053 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				03E64C0825DCEC230071C053 /* MockAddressBook.swift */,
 				03E64BA025DBEF180071C053 /* MockCNContactStore.swift */,
 				03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */,
 			);
