@@ -88,16 +88,16 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     }
     
     private func calculateItemSize(at indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: view.frame.width * 0.7, height: CGFloat.greatestFiniteMagnitude)
+        let targetSize = CGSize(width: view.frame.width * 0.7, height: CGFloat.greatestFiniteMagnitude)
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
         let text = viewModel.getCellViewModel(at: indexPath).text
-        let boundingRect = NSString(string: text).boundingRect(with: size,
+        let boundingRect = NSString(string: text).boundingRect(with: targetSize,
                                                                options: .usesLineFragmentOrigin,
                                                                attributes: attributes,
                                                                context: nil)
-        let height = ceil(boundingRect.height)
-        let width = ceil(boundingRect.width)
-        return CGSize(width: width, height: height + ChatCollectionViewCell.padding)
+        let size = CGSize(width: ceil(boundingRect.width),
+                          height: ceil(boundingRect.height) + ChatCollectionViewCell.padding)
+        return size
     }
     
     private func getCollectionViewSectionInsets() -> UIEdgeInsets {
