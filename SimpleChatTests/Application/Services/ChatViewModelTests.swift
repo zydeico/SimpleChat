@@ -52,4 +52,38 @@ final class ChatViewModelTests: XCTestCase {
         
         XCTAssertFalse(sut.getSentByUser(at: IndexPath(item: 1, section: 0)))
     }
+    
+    func testSendMessageAddItems() {
+        let initialItemCount = sut.getNumberOfItems(in: 0)
+        
+        sut.sendMessage(withText: "Some")
+        sut.sendMessage(withText: "Other")
+        
+        let newItemCount = sut.getNumberOfItems(in: 0)
+        
+        XCTAssertGreaterThan(newItemCount, initialItemCount)
+    }
+    
+    func testSendMessageCallsAutoResponderCreateResponseMethod() {
+        autoResponder.shouldCreateResponse = true
+        sut.sendMessage(withText: "Some")
+        
+        XCTAssertTrue(autoResponder.isCreateResponseCalled)
+    }
+    
+    func testSendMessageTriggersObservable() {
+        var messageCount: Int?
+        let expectation = self.expectation(description: "isMessageCountUpdated triggered")
+        
+        sut.isMessageCountUpdated.bind { count in
+            messageCount = count
+            expectation.fulfill()
+        }
+        
+        sut.sendMessage(withText: "Some")
+        
+        waitForExpectations(timeout: 1.0)
+        
+        XCTAssertNotNil(messageCount)
+    }
 }
