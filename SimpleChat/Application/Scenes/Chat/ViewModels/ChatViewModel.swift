@@ -19,10 +19,12 @@ final class ChatViewModel {
     }
     
     private let contact: ChatContactModel
+    private let autoResponder: AutoResponseProvider
     private var items: [ChatModel] = []
     
-    init(contact: Contact) {
+    init(contact: Contact, autoResponder: AutoResponseProvider) {
         self.contact = ChatContactModel(contact)
+        self.autoResponder = autoResponder
     }
     
     func getNumberOfItems(in section: Int) -> Int {
