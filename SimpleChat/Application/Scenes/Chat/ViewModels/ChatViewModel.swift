@@ -59,11 +59,10 @@ final class ChatViewModel {
     }
     
     private func scheduleAutoReplyMessage(withText text: String) {
-        let seconds = Double(arc4random_uniform(5))
-        DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + seconds, execute: { [weak self] in
-            self?.addAutoReplyMessage(text: String(text.reversed()))
+        autoResponder.createResponse(withText: text) { [weak self] response in
+            self?.addAutoReplyMessage(text: response)
             self?.isMessageCountUpdated.value = self?.items.count
-        })
+        }
     }
     
     func tapBack() {
