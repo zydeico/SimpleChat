@@ -559,8 +559,8 @@
 		03F0B42025D271A700694657 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				03F0B50125D36FCB00694657 /* Router */,
 				03F0B50025D36F8C00694657 /* Coordinator */,
+				03F0B50125D36FCB00694657 /* Router */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
