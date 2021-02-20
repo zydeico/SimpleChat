@@ -195,7 +195,9 @@
 		03541B3025E0CC72003D5A73 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03E64C0825DCEC230071C053 /* MockAddressBook.swift */,
 				03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */,
+				03E64B9F25DBEDFB0071C053 /* Contacts */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,6 +208,16 @@
 				03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		03541B5125E0D596003D5A73 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				03E64C3425DD05770071C053 /* ChatCellViewModel.swift */,
+				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
+				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
+			);
+			path = ChatCell;
 			sourceTree = "<group>";
 		};
 		03E64A7325DA07A10071C053 /* Common */ = {
@@ -253,7 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				03541B3025E0CC72003D5A73 /* Services */,
-				03E64B9F25DBEDFB0071C053 /* Contacts */,
 				03E64ACA25DA36840071C053 /* Navigation */,
 				03E64C1925DCF5E20071C053 /* Scenes */,
 			);
@@ -330,19 +341,11 @@
 		03E64B6C25DBC1650071C053 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03E64B8025DBC88B0071C053 /* AddressBook.swift */,
+				03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */,
 				03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */,
-				03E64B6D25DBC1990071C053 /* Contacts */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		03E64B6D25DBC1990071C053 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */,
-				03E64B8025DBC88B0071C053 /* AddressBook.swift */,
-			);
-			path = Contacts;
 			sourceTree = "<group>";
 		};
 		03E64B9125DBECF40071C053 /* Application */ = {
@@ -358,25 +361,16 @@
 		03E64B9225DBECFC0071C053 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */,
-				03E64B9625DBED8D0071C053 /* Contacts */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		03E64B9625DBED8D0071C053 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
 				03E64BE025DCC8F10071C053 /* AddressBookTests.swift */,
 				03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */,
+				03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */,
 			);
-			path = Contacts;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		03E64B9F25DBEDFB0071C053 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				03E64C0825DCEC230071C053 /* MockAddressBook.swift */,
 				03E64BA025DBEF180071C053 /* MockCNContactStore.swift */,
 				03E64C0E25DCED300071C053 /* MockContactsPermissionRequester.swift */,
 			);
@@ -445,9 +439,7 @@
 		03E64C2925DD02380071C053 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				03E64C3425DD05770071C053 /* ChatCellViewModel.swift */,
-				03E64C2B25DD02640071C053 /* ChatCollectionViewCell.xib */,
-				03E64C2A25DD02640071C053 /* ChatCollectionViewCell.swift */,
+				03541B5125E0D596003D5A73 /* ChatCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -559,8 +551,8 @@
 		03F0B42025D271A700694657 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				03F0B50125D36FCB00694657 /* Router */,
 				03F0B50025D36F8C00694657 /* Coordinator */,
+				03F0B50125D36FCB00694657 /* Router */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
