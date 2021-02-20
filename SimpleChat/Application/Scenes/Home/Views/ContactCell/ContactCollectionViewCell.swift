@@ -58,6 +58,7 @@ final class ContactCollectionViewCell: UICollectionViewCell {
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = imageView.frame.height / 2.0
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = UIColor(named: "Placeholder")
     }
 }
