@@ -86,4 +86,12 @@ final class ChatViewModelTests: XCTestCase {
         
         XCTAssertNotNil(messageCount)
     }
+    
+    func testGetCellViewModelReturnsChatCellViewModel() {
+        let text = "Some"
+        sut.sendMessage(withText: text)
+        let model = sut.getCellViewModel(at: IndexPath(item: 0, section: 0))
+        
+        XCTAssertEqual(model, ChatCellViewModel(text: text))
+    }
 }
