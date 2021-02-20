@@ -340,19 +340,11 @@
 		03E64B6C25DBC1650071C053 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03E64B8025DBC88B0071C053 /* AddressBook.swift */,
+				03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */,
 				03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */,
-				03E64B6D25DBC1990071C053 /* Contacts */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		03E64B6D25DBC1990071C053 /* Contacts */ = {
-			isa = PBXGroup;
-			children = (
-				03E64B6E25DBC1AA0071C053 /* ContactsPermissionRequester.swift */,
-				03E64B8025DBC88B0071C053 /* AddressBook.swift */,
-			);
-			path = Contacts;
 			sourceTree = "<group>";
 		};
 		03E64B9125DBECF40071C053 /* Application */ = {
