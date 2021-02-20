@@ -19,10 +19,12 @@ final class ChatViewModel {
     }
     
     private let contact: ChatContactModel
+    private let autoResponder: AutoResponseProvider
     private var items: [ChatModel] = []
     
-    init(contact: Contact) {
+    init(contact: Contact, autoResponder: AutoResponseProvider) {
         self.contact = ChatContactModel(contact)
+        self.autoResponder = autoResponder
     }
     
     func getNumberOfItems(in section: Int) -> Int {
@@ -57,11 +59,10 @@ final class ChatViewModel {
     }
     
     private func scheduleAutoReplyMessage(withText text: String) {
-        let seconds = Double(arc4random_uniform(5))
-        DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + seconds, execute: { [weak self] in
-            self?.addAutoReplyMessage(text: String(text.reversed()))
+        autoResponder.createResponse(withText: text) { [weak self] response in
+            self?.addAutoReplyMessage(text: response)
             self?.isMessageCountUpdated.value = self?.items.count
-        })
+        }
     }
     
     func tapBack() {

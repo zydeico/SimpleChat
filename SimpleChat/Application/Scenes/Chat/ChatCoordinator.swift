@@ -29,7 +29,7 @@ final class ChatCoordinator: Coordinator {
     
     private func showChatScreen() {
         let vc = ChatViewController.instantiate()
-        let vm = ChatViewModel(contact: contact)
+        let vm = ChatViewModel(contact: contact, autoResponder: ReverseAutoResponder())
         vm.delegate = self
         vc.viewModel = vm
         router.push(vc)
