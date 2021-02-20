@@ -18,6 +18,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     var viewModel: ChatViewModel!
     
     private let cellReuseIdentifier = "ChatCollectionViewCell"
+    private var itemSizeCache: [IndexPath: CGSize] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +98,15 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
                                                                context: nil)
         let size = CGSize(width: ceil(boundingRect.width),
                           height: ceil(boundingRect.height) + ChatCollectionViewCell.padding)
+        itemSizeCache[indexPath] = size
         return size
+    }
+    
+    private func getItemSize(at indexPath: IndexPath) -> CGSize {
+        if let i = itemSizeCache.index(forKey: indexPath) {
+            return itemSizeCache[i].value
+        }
+        return calculateItemSize(at: indexPath)
     }
     
     private func getCollectionViewSectionInsets() -> UIEdgeInsets {
@@ -136,7 +145,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
 
 extension ChatViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = calculateItemSize(at: indexPath).height
+        let height = getItemSize(at: indexPath).height
         let insets = getCollectionViewSectionInsets()
         return CGSize(width: view.frame.width - (insets.left + insets.right), height: height)
     }
@@ -153,7 +162,7 @@ extension ChatViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? ChatCollectionViewCell else {
             fatalError("Could not dequeue cell.")
         }
-        let width = calculateItemSize(at: indexPath).width
+        let width = getItemSize(at: indexPath).width
         cell.viewModel = viewModel.getCellViewModel(at: indexPath)
         cell.setWidth(width)
         if viewModel.getSentByUser(at: indexPath) {
