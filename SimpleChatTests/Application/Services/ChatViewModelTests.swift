@@ -29,4 +29,8 @@ final class ChatViewModelTests: XCTestCase {
         autoResponder = nil
         delegate = nil
     }
+    
+    func testTitleReturnsContactName() {
+        XCTAssertEqual(sut.title, contact.name)
+    }
 }
