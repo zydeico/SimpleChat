@@ -33,4 +33,10 @@ final class ChatViewModelTests: XCTestCase {
     func testTitleReturnsContactName() {
         XCTAssertEqual(sut.title, contact.name)
     }
+    
+    func testGetNumberOfItemsReturnsItemsCount() {
+        sut.sendMessage(withText: "Some")
+        
+        XCTAssertEqual(sut.getNumberOfItems(in: 0), 1)
+    }
 }
