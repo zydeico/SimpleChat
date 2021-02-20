@@ -94,4 +94,12 @@ final class ChatViewModelTests: XCTestCase {
         
         XCTAssertEqual(model, ChatCellViewModel(text: text))
     }
+    
+    func testIsMessageValidWhenInputIsNotEmptyReturnsTrue() {
+        XCTAssertTrue(sut.isMessageValid(withText: "Some"))
+    }
+    
+    func testIsMessageValidWhenInputIsEmptyReturnsFalse() {
+        XCTAssertFalse(sut.isMessageValid(withText: ""))
+    }
 }
