@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03541AEF25E0C242003D5A73 /* AutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */; };
 		03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */; };
+		03541B1325E0CA00003D5A73 /* ReverseAutoResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResponseProvider.swift; sourceTree = "<group>"; };
 		03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponder.swift; sourceTree = "<group>"; };
+		03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponderTests.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		03E64B9225DBECFC0071C053 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */,
 				03E64B9625DBED8D0071C053 /* Contacts */,
 			);
 			path = Services;
@@ -777,6 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03541B1325E0CA00003D5A73 /* ReverseAutoResponderTests.swift in Sources */,
 				03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */,
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 				03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */,
