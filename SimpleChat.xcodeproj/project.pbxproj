@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03541AEF25E0C242003D5A73 /* AutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */; };
+		03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
@@ -81,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResponseProvider.swift; sourceTree = "<group>"; };
+		03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponder.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		03E64B6C25DBC1650071C053 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */,
 				03E64B6D25DBC1990071C053 /* Contacts */,
 			);
 			path = Services;
@@ -739,6 +742,7 @@
 				03E64B7C25DBC8620071C053 /* AddressBookProvider.swift in Sources */,
 				03F0B46425D288F000694657 /* CoordinatorAllocator.swift in Sources */,
 				03E64C3525DD05770071C053 /* ChatCellViewModel.swift in Sources */,
+				03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */,
 				03E64B4125DB90850071C053 /* ChatViewModel.swift in Sources */,
 				03E64AF225DA929E0071C053 /* ContactCollectionViewCell.swift in Sources */,
 				03F0B42325D271DA00694657 /* Coordinator.swift in Sources */,
