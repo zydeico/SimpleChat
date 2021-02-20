@@ -11,6 +11,7 @@
 		03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */; };
 		03541B1325E0CA00003D5A73 /* ReverseAutoResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */; };
 		03541B3225E0CD03003D5A73 /* MockAutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */; };
+		03541B3E25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
@@ -87,6 +88,7 @@
 		03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponder.swift; sourceTree = "<group>"; };
 		03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponderTests.swift; sourceTree = "<group>"; };
 		03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAutoResponseProvider.swift; sourceTree = "<group>"; };
+		03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatViewModelDelegate.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 				03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		03541B3C25E0D1CF003D5A73 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		03E64A7325DA07A10071C053 /* Common */ = {
@@ -399,6 +409,7 @@
 		03E64C1925DCF5E20071C053 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				03541B3C25E0D1CF003D5A73 /* Chat */,
 				03E64C1A25DCF60B0071C053 /* Home */,
 			);
 			path = Scenes;
@@ -795,6 +806,7 @@
 				03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */,
 				03E64AB425DA20950071C053 /* FakePresentable.swift in Sources */,
 				03E64C0F25DCED300071C053 /* MockContactsPermissionRequester.swift in Sources */,
+				03541B3E25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift in Sources */,
 				03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */,
 				03541B3225E0CD03003D5A73 /* MockAutoResponseProvider.swift in Sources */,
 				03E64C0125DCEBC70071C053 /* HomeViewModelTests.swift in Sources */,
