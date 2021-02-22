@@ -167,6 +167,7 @@ extension ChatViewController: UICollectionViewDataSource {
         cell.setWidth(width)
         if viewModel.isSentByUser(at: indexPath) {
             cell.setOriginX(view.frame.width - width - getCollectionViewSectionInsets().right)
+            cell.useVariantColor = true
         }
         return cell
     }

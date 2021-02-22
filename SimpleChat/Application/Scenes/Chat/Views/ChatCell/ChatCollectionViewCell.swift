@@ -18,12 +18,26 @@ final class ChatCollectionViewCell: UICollectionViewCell {
             setUpModel()
         }
     }
+    var useVariantColor: Bool? {
+        didSet {
+            if useVariantColor == true {
+                mainView.backgroundColor = .systemBlue
+                label.textColor = .white
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpLayer()
         setUpMainView()
         setUpLabel()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mainView.backgroundColor = nil
+        label.textColor = .label
     }
     
     func setWidth(_ width: CGFloat) {
