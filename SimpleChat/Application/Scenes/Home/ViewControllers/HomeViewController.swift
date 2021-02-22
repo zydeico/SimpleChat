@@ -51,6 +51,8 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
                 return
             }
             self?.viewModel.getContacts()
+        }
+        viewModel.isContactsCountUpdated.bind { [weak self] _ in
             self?.collectionView.reloadData()
         }
     }

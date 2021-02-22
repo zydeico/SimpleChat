@@ -17,6 +17,7 @@ final class HomeViewModel {
     let contactsPermissionAlertMessage = NSLocalizedString("permissions.contacts.alert.message", comment: "")
     let contactsPermissionAlertButtonTitle = NSLocalizedString("common.ok", comment: "")
     let isContactsPermissionGranted = Observable<Bool>()
+    let isContactsCountUpdated = Observable<Int>()
     
     weak var delegate: HomeViewModelDelegate?
     var shouldRequestManualContactsPermission: Bool {
@@ -39,7 +40,10 @@ final class HomeViewModel {
     }
     
     func getContacts() {
-        items = addressBook.getContacts().map { ContactCellViewModel($0) }
+        addressBook.getContacts { [weak self] contacts in
+            self?.items = contacts.map { ContactCellViewModel($0) }
+            self?.isContactsCountUpdated.value = contacts.count
+        }
     }
     
     func getNumberOfItems(in section: Int) -> Int {
