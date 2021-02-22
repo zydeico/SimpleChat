@@ -8,5 +8,5 @@
 import Foundation
 
 protocol AddressBookProvider {
-    func getContacts() -> [Contact]
+    func getContacts(completionHandler: @escaping ([Contact]) -> Void)
 }
