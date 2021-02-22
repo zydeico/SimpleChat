@@ -11,7 +11,6 @@ class MockCNContactStore: CNContactStore {
     static var authorizationStatusToReturn: CNAuthorizationStatus!
     
     var isRequestAccessCalled = false
-    var isEnumerateContactsCalled = false
     
     static override func authorizationStatus(for entityType: CNEntityType) -> CNAuthorizationStatus {
         return authorizationStatusToReturn
@@ -25,7 +24,6 @@ class MockCNContactStore: CNContactStore {
         guard MockCNContactStore.authorizationStatusToReturn == .authorized else {
             fatalError("Permission not granted.")
         }
-        isEnumerateContactsCalled = true
         block(CNContact(), UnsafeMutablePointer<ObjCBool>.allocate(capacity: 1))
     }
 }
