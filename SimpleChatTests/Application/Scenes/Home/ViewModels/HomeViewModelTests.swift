@@ -36,7 +36,7 @@ final class HomeViewModelTests: XCTestCase {
         delegate = nil
     }
     
-    func testRequestContactsPermissionTriggersObservable() {
+    func testRequestContactsPermissionTriggersIsContactsPermissionGrantedObservable() {
         var grantedPermissionResult: Bool?
         let expectation = self.expectation(description: "isContactsPermissionGranted triggered")
         
@@ -57,6 +57,21 @@ final class HomeViewModelTests: XCTestCase {
         sut.getContacts()
         
         XCTAssertTrue(addressBook.isGetContactsCalled)
+    }
+    
+    func testGetContactsTriggersIsContactsCountUpdatedObservable() {
+        var contactsCount: Int?
+        let expectation = self.expectation(description: "isContactsCountUpdated triggered")
+        sut.isContactsCountUpdated.bind { c in
+            contactsCount = c
+            expectation.fulfill()
+        }
+        
+        sut.getContacts()
+        
+        waitForExpectations(timeout: 1.0)
+        
+        XCTAssertNotNil(contactsCount)
     }
     
     func testGetNumberOfItemsReturnsItemsCount() {
