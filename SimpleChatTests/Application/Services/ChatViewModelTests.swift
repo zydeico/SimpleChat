@@ -40,17 +40,17 @@ final class ChatViewModelTests: XCTestCase {
         XCTAssertEqual(sut.getNumberOfItems(in: 0), 1)
     }
     
-    func testGetSentByUserWhenIsSentByUserReturnsTrue() {
+    func testIsSentByUserWhenWasSentByUserReturnsTrue() {
         sut.sendMessage(withText: "Some")
         
-        XCTAssertTrue(sut.getSentByUser(at: IndexPath(item: 0, section: 0)))
+        XCTAssertTrue(sut.isSentByUser(at: IndexPath(item: 0, section: 0)))
     }
     
-    func testGetSentByUserWhenIsNotSentByUserReturnsFalse() {
+    func testIsSentByUserWhenWasNotSentByUserReturnsFalse() {
         autoResponder.shouldCreateResponse = true
         sut.sendMessage(withText: "Some")
         
-        XCTAssertFalse(sut.getSentByUser(at: IndexPath(item: 1, section: 0)))
+        XCTAssertFalse(sut.isSentByUser(at: IndexPath(item: 1, section: 0)))
     }
     
     func testSendMessageAddItems() {

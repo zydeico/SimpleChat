@@ -31,7 +31,7 @@ final class ChatViewModel {
         return items.count
     }
     
-    func getSentByUser(at indexPath: IndexPath) -> Bool {
+    func isSentByUser(at indexPath: IndexPath) -> Bool {
         return items[indexPath.item].isSentByUser
     }
     
@@ -50,6 +50,10 @@ final class ChatViewModel {
         return !text.isEmpty
     }
     
+    func tapBack() {
+        delegate?.didTapBack()
+    }
+    
     private func addUserMessage(text: String) {
         items.append(ChatModel(message: text, isSentByUser: true))
     }
@@ -63,9 +67,5 @@ final class ChatViewModel {
             self?.addAutoReplyMessage(text: response)
             self?.isMessageCountUpdated.value = self?.items.count
         }
-    }
-    
-    func tapBack() {
-        delegate?.didTapBack()
     }
 }

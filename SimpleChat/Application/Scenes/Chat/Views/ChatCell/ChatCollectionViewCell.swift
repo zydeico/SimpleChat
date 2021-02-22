@@ -18,6 +18,14 @@ final class ChatCollectionViewCell: UICollectionViewCell {
             setUpModel()
         }
     }
+    var useVariantColor: Bool? {
+        didSet {
+            if useVariantColor == true {
+                mainView.backgroundColor = .systemBlue
+                label.textColor = .white
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,12 +34,18 @@ final class ChatCollectionViewCell: UICollectionViewCell {
         setUpLabel()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mainView.backgroundColor = nil
+        label.textColor = .label
+    }
+    
     func setWidth(_ width: CGFloat) {
-        frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: width + Self.padding, height: frame.height)
+        frame = CGRect(origin: frame.origin, size: CGSize(width: width + Self.padding, height: frame.height))
     }
     
     func setOriginX(_ x: CGFloat) {
-        frame = CGRect(x: x - Self.padding, y: frame.origin.y, width: frame.width, height: frame.height)
+        frame = CGRect(origin: CGPoint(x: x - Self.padding, y: frame.origin.y), size: frame.size)
     }
     
     private func setUpModel() {
