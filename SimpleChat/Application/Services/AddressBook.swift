@@ -14,16 +14,18 @@ final class AddressBook: AddressBookProvider {
         self.contactStore = contactStore
     }
     
-    func getContacts() -> [Contact] {
+    func getContacts(completionHandler: @escaping ([Contact]) -> Void) {
         var contacts: [Contact] = []
         let keys = [ CNContactGivenNameKey, CNContactFamilyNameKey, CNContactImageDataKey ]
-        do {
-            try contactStore.enumerateContacts(with: .init(keysToFetch: keys as [CNKeyDescriptor]), usingBlock: { contact, _ in
-                contacts.append(Contact(name: contact.givenName, lastName: contact.familyName, imageData: contact.imageData))
-            })
-        } catch {
-            assertionFailure(error.localizedDescription)
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            do {
+                try self?.contactStore.enumerateContacts(with: .init(keysToFetch: keys as [CNKeyDescriptor]), usingBlock: { contact, _ in
+                    contacts.append(Contact(name: contact.givenName, lastName: contact.familyName, imageData: contact.imageData))
+                })
+            } catch {
+                assertionFailure(error.localizedDescription)
+            }
+            completionHandler(contacts)
         }
-        return contacts
     }
 }
