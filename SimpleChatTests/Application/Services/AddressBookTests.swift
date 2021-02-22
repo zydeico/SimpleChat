@@ -25,9 +25,14 @@ final class AddressBookTests: XCTestCase {
     }
     
     func testGetContactsWithAuthorizedStatusCallsDependencyMethod() {
+        let expectation = self.expectation(description: "contacts are fetched")
         MockCNContactStore.authorizationStatusToReturn = .authorized
         
-        _ = sut.getContacts()
+        sut.getContacts { _ in
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0)
         
         XCTAssertTrue(contactStore.isEnumerateContactsCalled)
     }
@@ -35,6 +40,8 @@ final class AddressBookTests: XCTestCase {
     func testGetContactsWithAuthorizedStatusReturnsContacts() {
         MockCNContactStore.authorizationStatusToReturn = .authorized
 
-        XCTAssertGreaterThan(sut.getContacts().count, 0)
+        sut.getContacts { contacts in
+            XCTAssertGreaterThan(contacts.count, 0)
+        }
     }
 }

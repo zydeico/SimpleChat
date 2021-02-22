@@ -12,8 +12,8 @@ class MockAddressBook: AddressBookProvider {
     var contactsToReturn: [Contact]!
     var isGetContactsCalled = false
     
-    func getContacts() -> [Contact] {
+    func getContacts(completionHandler: @escaping ([Contact]) -> Void) {
         isGetContactsCalled = true
-        return contactsToReturn
+        completionHandler(contactsToReturn)
     }
 }
