@@ -13,6 +13,8 @@
 		03541B2925E0CC41003D5A73 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B2825E0CC41003D5A73 /* ChatViewModelTests.swift */; };
 		03541B3225E0CD03003D5A73 /* MockAutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */; };
 		03541B3E25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */; };
+		03541B5D25E4FF37003D5A73 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03541B5C25E4FF37003D5A73 /* BackgroundView.xib */; };
+		03541B6225E4FF8E003D5A73 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B6125E4FF8E003D5A73 /* BackgroundView.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
@@ -91,6 +93,8 @@
 		03541B2825E0CC41003D5A73 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModelTests.swift; path = SimpleChatTests/Application/Services/ChatViewModelTests.swift; sourceTree = SOURCE_ROOT; };
 		03541B3125E0CD03003D5A73 /* MockAutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAutoResponseProvider.swift; sourceTree = "<group>"; };
 		03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatViewModelDelegate.swift; sourceTree = "<group>"; };
+		03541B5C25E4FF37003D5A73 /* BackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
+		03541B6125E4FF8E003D5A73 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
@@ -220,6 +224,15 @@
 			path = ChatCell;
 			sourceTree = "<group>";
 		};
+		03541B5B25E4FED6003D5A73 /* BackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				03541B5C25E4FF37003D5A73 /* BackgroundView.xib */,
+				03541B6125E4FF8E003D5A73 /* BackgroundView.swift */,
+			);
+			path = BackgroundView;
+			sourceTree = "<group>";
+		};
 		03E64A7325DA07A10071C053 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +297,7 @@
 		03E64AE425DA92680071C053 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03541B5B25E4FED6003D5A73 /* BackgroundView */,
 				03E64B2125DB86440071C053 /* ContactCell */,
 			);
 			path = Views;
@@ -719,6 +733,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03541B5D25E4FF37003D5A73 /* BackgroundView.xib in Resources */,
 				03E64B3225DB90260071C053 /* Chat.storyboard in Resources */,
 				03E64B7725DBC61C0071C053 /* InfoPlist.strings in Resources */,
 				03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */,
@@ -797,6 +812,7 @@
 				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
 				03F0B46E25D2A91B00694657 /* AppCoordinator.swift in Sources */,
 				03F0B4F125D36B0700694657 /* StoryboardInstanceable.swift in Sources */,
+				03541B6225E4FF8E003D5A73 /* BackgroundView.swift in Sources */,
 				03E64C4225DE4A5B0071C053 /* ChatModel.swift in Sources */,
 				03F0B50325D36FD900694657 /* Presentable.swift in Sources */,
 				03F0B4A925D2CAD700694657 /* UIViewController+StoryboardInstanceable.swift in Sources */,
