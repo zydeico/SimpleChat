@@ -15,6 +15,7 @@
 		03541B3E25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */; };
 		03541B5D25E4FF37003D5A73 /* BackgroundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03541B5C25E4FF37003D5A73 /* BackgroundView.xib */; };
 		03541B6225E4FF8E003D5A73 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B6125E4FF8E003D5A73 /* BackgroundView.swift */; };
+		03541B6725E50A4C003D5A73 /* BackgroundViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B6625E50A4C003D5A73 /* BackgroundViewViewModel.swift */; };
 		03E64A9E25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */; };
 		03E64AA725DA20420071C053 /* DummyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AA625DA20420071C053 /* DummyCoordinator.swift */; };
 		03E64AAF25DA20580071C053 /* DummyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64AAE25DA20580071C053 /* DummyRouter.swift */; };
@@ -95,6 +96,7 @@
 		03541B3D25E0D1DB003D5A73 /* MockChatViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChatViewModelDelegate.swift; sourceTree = "<group>"; };
 		03541B5C25E4FF37003D5A73 /* BackgroundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundView.xib; sourceTree = "<group>"; };
 		03541B6125E4FF8E003D5A73 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		03541B6625E50A4C003D5A73 /* BackgroundViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundViewViewModel.swift; sourceTree = "<group>"; };
 		03E64A9D25DA1C0E0071C053 /* CoordinatorAllocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAllocatorTests.swift; sourceTree = "<group>"; };
 		03E64AA625DA20420071C053 /* DummyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyCoordinator.swift; sourceTree = "<group>"; };
 		03E64AAE25DA20580071C053 /* DummyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRouter.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				03541B5C25E4FF37003D5A73 /* BackgroundView.xib */,
 				03541B6125E4FF8E003D5A73 /* BackgroundView.swift */,
+				03541B6625E50A4C003D5A73 /* BackgroundViewViewModel.swift */,
 			);
 			path = BackgroundView;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				03F0B38B25D21CC800694657 /* AppDelegate.swift in Sources */,
 				03F0B44F25D284CB00694657 /* Router.swift in Sources */,
 				03E64BF025DCD1540071C053 /* ChatContactModel.swift in Sources */,
+				03541B6725E50A4C003D5A73 /* BackgroundViewViewModel.swift in Sources */,
 				03F0B46925D2A89900694657 /* AppRouter.swift in Sources */,
 				03E64B2A25DB901D0071C053 /* ChatCoordinator.swift in Sources */,
 				03F0B45F25D2885600694657 /* CoordinatorAllocatable.swift in Sources */,
