@@ -13,16 +13,10 @@ protocol HomeViewModelDelegate: AnyObject {
 
 final class HomeViewModel {
     let title = NSLocalizedString("common.appTitle", comment: "")
-    let contactsPermissionAlertTitle = NSLocalizedString("permissions.contacts.alert.title", comment: "")
-    let contactsPermissionAlertMessage = NSLocalizedString("permissions.contacts.alert.message", comment: "")
-    let contactsPermissionAlertButtonTitle = NSLocalizedString("common.ok", comment: "")
     let isContactsPermissionGranted = Observable<Bool>()
     let isContactsCountUpdated = Observable<Int>()
     
     weak var delegate: HomeViewModelDelegate?
-    var shouldRequestManualContactsPermission: Bool {
-        return contactsPermissionRequester.isPermissionRequested && !contactsPermissionRequester.isPermissionGranted
-    }
     
     private let contactsPermissionRequester: PermissionRequestable
     private let addressBook: AddressBookProvider
@@ -57,5 +51,10 @@ final class HomeViewModel {
     func selectItem(at indexPath: IndexPath) {
         let item = items[indexPath.item]
         delegate?.didSelectContact(item.asContact())
+    }
+    
+    func getBackgroundViewModel() -> BackgroundViewViewModel {
+        return BackgroundViewViewModel(title: NSLocalizedString("home.contacts.accessNotAllowed.title", comment: ""),
+                                   subtitle: NSLocalizedString("home.contacts.accessNotAllowed.description", comment: ""))
     }
 }

@@ -7,7 +7,6 @@
 */
 
 "common.appTitle" = "Simple Chat";
-"common.ok" = "OK";
 
-"permissions.contacts.alert.title" = "Allow access to your Contacts";
-"permissions.contacts.alert.message" = "Open settings to allow access to your contacts.";
+"home.contacts.accessNotAllowed.title" = "Allow access to your Contacts";
+"home.contacts.accessNotAllowed.description" = "Open Settings and allow access to your contacts to continue chatting.";

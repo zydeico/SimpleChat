@@ -100,24 +100,10 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(expectedItem.asContact(), contacts[indexPath.item])
     }
     
-    func testShouldRequestManualContactsPermissionWithPermissionRequestedAndNotGrantedReturnsTrue() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionGrantedToReturn = false
+    func testGetBackgroundViewModelReturnsBackgroundViewModel() {
+        let model = sut.getBackgroundViewModel()
         
-        XCTAssertTrue(sut.shouldRequestManualContactsPermission)
-    }
-    
-    func testShouldRequestManualContactsPermissionWithPermissionGrantedReturnsFalse() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionGrantedToReturn = true
-        
-        XCTAssertFalse(sut.shouldRequestManualContactsPermission)
-    }
-    
-    func testShouldRequestManualContactsPermissionWithPermissionNotRequestedReturnsFalse() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionRequestedToReturn = false
-        
-        XCTAssertFalse(sut.shouldRequestManualContactsPermission)
+        XCTAssertEqual(model, BackgroundViewViewModel(title: NSLocalizedString("home.contacts.accessNotAllowed.title", comment: ""),
+                                                  subtitle: NSLocalizedString("home.contacts.accessNotAllowed.description", comment: "")))
     }
 }
