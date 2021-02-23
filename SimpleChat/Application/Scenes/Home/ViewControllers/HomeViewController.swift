@@ -42,7 +42,11 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
     
     private func bind() {
         viewModel.isContactsPermissionGranted.bind { [weak self] isGranted in
-            guard isGranted == true else {
+            guard let granted = isGranted else {
+                return
+            }
+            guard granted == true else {
+                self?.setUpBackgroundView()
                 return
             }
             self?.viewModel.getContacts()
@@ -52,6 +56,10 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         }
     }
     
+    private func setUpBackgroundView() {
+        let view = BackgroundView.instantiate()
+        view.viewModel = viewModel.getBackgroundViewModel()
+        collectionView.backgroundView = view
     }
 }
 

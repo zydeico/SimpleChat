@@ -52,4 +52,9 @@ final class HomeViewModel {
         let item = items[indexPath.item]
         delegate?.didSelectContact(item.asContact())
     }
+    
+    func getBackgroundViewModel() -> BackgroundViewViewModel {
+        return BackgroundViewViewModel(title: NSLocalizedString("home.contacts.accessNotAllowed.title", comment: ""),
+                                   subtitle: NSLocalizedString("home.contacts.accessNotAllowed.description", comment: ""))
+    }
 }
