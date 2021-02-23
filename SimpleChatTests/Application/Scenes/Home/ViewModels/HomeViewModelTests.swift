@@ -99,4 +99,11 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(delegate.isDidSelectContactCalled)
         XCTAssertEqual(expectedItem.asContact(), contacts[indexPath.item])
     }
+    
+    func testGetBackgroundViewModelReturnsBackgroundViewModel() {
+        let model = sut.getBackgroundViewModel()
+        
+        XCTAssertEqual(model, BackgroundViewViewModel(title: NSLocalizedString("home.contacts.accessNotAllowed.title", comment: ""),
+                                                  subtitle: NSLocalizedString("home.contacts.accessNotAllowed.description", comment: "")))
+    }
 }
