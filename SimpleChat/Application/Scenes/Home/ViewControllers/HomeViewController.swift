@@ -24,11 +24,6 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         viewModel.requestContactsPermission()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        showRequestManualContactsPermissionAlertIfNeeded()
-    }
-    
     private func setUpNavigationBar() {
         navigationItem.title = viewModel.title
     }
@@ -57,15 +52,6 @@ final class HomeViewController: UIViewController, StoryboardInstanceable {
         }
     }
     
-    private func showRequestManualContactsPermissionAlertIfNeeded() {
-        guard viewModel.shouldRequestManualContactsPermission else {
-            return
-        }
-        let alert = UIAlertController(title: viewModel.contactsPermissionAlertTitle,
-                                      message: viewModel.contactsPermissionAlertMessage,
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: viewModel.contactsPermissionAlertButtonTitle, style: .default))
-        present(alert, animated: true)
     }
 }
 

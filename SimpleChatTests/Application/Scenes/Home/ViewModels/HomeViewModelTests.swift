@@ -99,25 +99,4 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(delegate.isDidSelectContactCalled)
         XCTAssertEqual(expectedItem.asContact(), contacts[indexPath.item])
     }
-    
-    func testShouldRequestManualContactsPermissionWithPermissionRequestedAndNotGrantedReturnsTrue() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionGrantedToReturn = false
-        
-        XCTAssertTrue(sut.shouldRequestManualContactsPermission)
-    }
-    
-    func testShouldRequestManualContactsPermissionWithPermissionGrantedReturnsFalse() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionGrantedToReturn = true
-        
-        XCTAssertFalse(sut.shouldRequestManualContactsPermission)
-    }
-    
-    func testShouldRequestManualContactsPermissionWithPermissionNotRequestedReturnsFalse() {
-        contactsPermissionRequester.isPermissionRequestedToReturn = true
-        contactsPermissionRequester.isPermissionRequestedToReturn = false
-        
-        XCTAssertFalse(sut.shouldRequestManualContactsPermission)
-    }
 }
