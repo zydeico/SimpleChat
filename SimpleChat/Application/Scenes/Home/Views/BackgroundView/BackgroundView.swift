@@ -11,6 +11,12 @@ final class BackgroundView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
+    var viewModel: BackgroundViewViewModel? {
+        didSet {
+            setUpModel()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpTitleLabel()
@@ -27,5 +33,10 @@ final class BackgroundView: UIView {
         subtitleLabel.numberOfLines = 0
         subtitleLabel.textAlignment = .center
         
+    }
+    
+    private func setUpModel() {
+        titleLabel.text = viewModel?.title
+        subtitleLabel.text = viewModel?.subtitle
     }
 }
