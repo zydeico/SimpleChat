@@ -14,11 +14,18 @@ final class BackgroundView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpTitleLabel()
+        setUpSubtitleLabel()
     }
     
     private func setUpTitleLabel() {
         titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
+    }
+    
+    private func setUpSubtitleLabel() {
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.textAlignment = .center
+        
     }
 }
