@@ -17,6 +17,13 @@ final class BackgroundView: UIView {
         }
     }
     
+    static func instantiate() -> BackgroundView {
+        guard let view = UINib(nibName: "BackgroundView", bundle: nil).instantiate(withOwner: self, options: nil).first as? BackgroundView else {
+            fatalError("The view could not be instantiated.")
+        }
+        return view
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpTitleLabel()
