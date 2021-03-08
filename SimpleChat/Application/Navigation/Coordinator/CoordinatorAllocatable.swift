@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CoordinatorAllocatable: class {
+protocol CoordinatorAllocatable: AnyObject {
     var childCoordinators: [Coordinator] { get set }
     
     func allocate(_ coordinator: Coordinator)
