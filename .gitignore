@@ -30,3 +30,6 @@ DerivedData/
 
 ## GCC patch
 /*.gcno
+
+## General
+.DS_Store
