@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033BF03125F6110700090CBA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 033BF03325F6110700090CBA /* Localizable.strings */; };
 		03541AEF25E0C242003D5A73 /* AutoResponseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */; };
 		03541B0B25E0C3C5003D5A73 /* ReverseAutoResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */; };
 		03541B1325E0CA00003D5A73 /* ReverseAutoResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */; };
@@ -36,7 +37,6 @@
 		03E64B8A25DBE5BF0071C053 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B8925DBE5BF0071C053 /* Observable.swift */; };
 		03E64B9825DBEDA50071C053 /* ContactsPermissionRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */; };
 		03E64BA125DBEF180071C053 /* MockCNContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BA025DBEF180071C053 /* MockCNContactStore.swift */; };
-		03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E64BBD25DC013C0071C053 /* Localizable.strings */; };
 		03E64BCA25DCA3780071C053 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BC925DCA3780071C053 /* Contact.swift */; };
 		03E64BE125DCC8F10071C053 /* AddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BE025DCC8F10071C053 /* AddressBookTests.swift */; };
 		03E64BF025DCD1540071C053 /* ChatContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E64BEF25DCD1540071C053 /* ChatContactModel.swift */; };
@@ -88,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		033BF03225F6110700090CBA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		03541AEE25E0C242003D5A73 /* AutoResponseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoResponseProvider.swift; sourceTree = "<group>"; };
 		03541B0A25E0C3C5003D5A73 /* ReverseAutoResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponder.swift; sourceTree = "<group>"; };
 		03541B1225E0CA00003D5A73 /* ReverseAutoResponderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseAutoResponderTests.swift; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		03E64B8925DBE5BF0071C053 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		03E64B9725DBEDA50071C053 /* ContactsPermissionRequesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionRequesterTests.swift; sourceTree = "<group>"; };
 		03E64BA025DBEF180071C053 /* MockCNContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCNContactStore.swift; sourceTree = "<group>"; };
-		03E64BBD25DC013C0071C053 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		03E64BC925DCA3780071C053 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		03E64BE025DCC8F10071C053 /* AddressBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookTests.swift; sourceTree = "<group>"; };
 		03E64BEF25DCD1540071C053 /* ChatContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactModel.swift; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 			children = (
 				03F0B39825D21CCA00694657 /* Info.plist */,
 				03E64B7625DBC61C0071C053 /* InfoPlist.strings */,
-				03E64BBD25DC013C0071C053 /* Localizable.strings */,
+				033BF03325F6110700090CBA /* Localizable.strings */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -742,7 +742,7 @@
 				03E64B0B25DA9DB20071C053 /* Colors.xcassets in Resources */,
 				03F0B47C25D2A9AA00694657 /* Home.storyboard in Resources */,
 				03E64AF325DA929E0071C053 /* ContactCollectionViewCell.xib in Resources */,
-				03E64BBE25DC013C0071C053 /* Localizable.strings in Resources */,
+				033BF03125F6110700090CBA /* Localizable.strings in Resources */,
 				03F0B39725D21CCA00694657 /* Launch.storyboard in Resources */,
 				03E64C2D25DD02640071C053 /* ChatCollectionViewCell.xib in Resources */,
 				03F0B39425D21CCA00694657 /* Assets.xcassets in Resources */,
@@ -875,6 +875,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		033BF03325F6110700090CBA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				033BF03225F6110700090CBA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		03F0B39525D21CCA00694657 /* Launch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
