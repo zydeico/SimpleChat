@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Presentable: class {
+protocol Presentable: AnyObject {
     func toPresent() -> Self
 }
