@@ -8,7 +8,6 @@
 import Foundation
 
 final class Observable<T> {
-    var observer: ((T?) -> Void)?
     var value: T? {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -16,6 +15,7 @@ final class Observable<T> {
             }
         }
     }
+    private var observer: ((T?) -> Void)?
     
     /// The observer closure will be called on the main thread.
     func bind(observer: @escaping (T?) -> Void) {
