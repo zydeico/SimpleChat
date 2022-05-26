@@ -10,7 +10,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    private var appCoordinator: AppCoordinator?
+    private var chatCoordinator: AppCoordinator?
     private var rootViewController: Presentable {
         guard let vc = window?.rootViewController else {
             fatalError("The window has not been setup.")
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func startApp() {
-        appCoordinator = AppCoordinator(router: AppRouter(rootPresentable: rootViewController))
-        appCoordinator?.start()
+        chatCoordinator = AppCoordinator(router: AppRouter(rootPresentable: rootViewController))
+        chatCoordinator?.showChats()
     }
 }

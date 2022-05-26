@@ -22,7 +22,7 @@ final class ChatViewController: UIViewController, StoryboardInstanceable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationBar()
+//        setUpNavigationBar()
         setUpCollectionView()
         setUpCollectionViewGestures()
         setUpTextView()

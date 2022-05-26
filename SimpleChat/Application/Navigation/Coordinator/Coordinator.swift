@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Coordinator: AnyObject {
-    var router: Router { get }
-    
-    func start()
+//    var router: Router { get }
+//    
+//    func start()
 }

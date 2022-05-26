@@ -8,6 +8,7 @@
 import Foundation
 
 final class AppCoordinator: Coordinator {
+    
     let router: Router
     
     private let coordinatorAllocator: CoordinatorAllocatable
@@ -17,13 +18,14 @@ final class AppCoordinator: Coordinator {
         self.coordinatorAllocator = coordinatorAllocator
     }
     
-    func start() {
-        startHome()
+    func showChats() {
+        let contact = Contact(name: "", lastName: "", imageData: nil)
+        startChat(with: contact)
     }
     
-    private func startHome() {
-        let coordinator = HomeCoordinator(router: router)
-        coordinatorAllocator.allocate(coordinator)
+    private func startChat(with contact: Contact) {
+        let coordinator = ChatCoordinator(router: router, contact: contact)
+        coordinatorAllocator.allocate(coordinator as Coordinator)
         coordinator.start()
     }
 }

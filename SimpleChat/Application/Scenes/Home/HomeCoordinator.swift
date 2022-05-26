@@ -47,7 +47,6 @@ extension HomeCoordinator: HomeViewModelDelegate {
 }
 
 // MARK: - Coordinator delegates
-
 extension HomeCoordinator: ChatCoordinatorDelegate {
     func didFinish(coordinator: ChatCoordinator) {
         coordinatorAllocator.deallocate(coordinator)
