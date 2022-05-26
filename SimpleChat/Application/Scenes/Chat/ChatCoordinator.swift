@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ChatCoordinator: Coordinator {
+final class ChatCoordinator {
     
     let router: Router
     

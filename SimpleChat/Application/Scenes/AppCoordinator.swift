@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator {
     
     let router: Router
     

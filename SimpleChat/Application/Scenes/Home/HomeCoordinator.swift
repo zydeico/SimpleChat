@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class HomeCoordinator: Coordinator {
+final class HomeCoordinator {
     let router: Router
     
     private let coordinatorAllocator: CoordinatorAllocatable
