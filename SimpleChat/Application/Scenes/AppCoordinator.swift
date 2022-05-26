@@ -11,11 +11,8 @@ final class AppCoordinator {
     
     let router: Router
     
-    private let coordinatorAllocator: CoordinatorAllocatable
-    
-    init(router: Router, coordinatorAllocator: CoordinatorAllocatable = CoordinatorAllocator()) {
+    init(router: Router) {
         self.router = router
-        self.coordinatorAllocator = coordinatorAllocator
     }
     
     func showChats() {
