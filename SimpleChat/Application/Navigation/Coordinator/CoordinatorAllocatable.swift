@@ -8,8 +8,8 @@
 import Foundation
 
 protocol CoordinatorAllocatable: AnyObject {
-    var childCoordinators: [Coordinator] { get set }
-    
-    func allocate(_ coordinator: Coordinator)
-    func deallocate(_ coordinator: Coordinator)
+//    var childCoordinators: [Coordinator] { get set }
+//    
+//    func allocate(_ coordinator: Coordinator)
+//    func deallocate(_ coordinator: Coordinator)
 }

@@ -7,14 +7,9 @@
 
 import Foundation
 
-protocol ChatCoordinatorDelegate: AnyObject {
-    func didFinish(coordinator: ChatCoordinator)
-}
-
 final class ChatCoordinator: Coordinator {
-    let router: Router
     
-    weak var delegate: ChatCoordinatorDelegate?
+    let router: Router
     
     private let contact: Contact
     
@@ -30,16 +25,7 @@ final class ChatCoordinator: Coordinator {
     private func showChatScreen() {
         let vc = ChatViewController.instantiate()
         let vm = ChatViewModel(contact: contact, autoResponder: ReverseAutoResponder())
-        vm.delegate = self
         vc.viewModel = vm
         router.push(vc)
-    }
-}
-
-// MARK: - View model delegates
-extension ChatCoordinator: ChatViewModelDelegate {
-    func didTapBack() {
-//        router.pop()
-        delegate?.didFinish(coordinator: self)
     }
 }

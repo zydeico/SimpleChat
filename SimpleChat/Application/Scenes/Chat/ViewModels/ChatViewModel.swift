@@ -7,13 +7,8 @@
 
 import Foundation
 
-protocol ChatViewModelDelegate: AnyObject {
-    func didTapBack()
-}
-
 final class ChatViewModel {
     let isMessageCountUpdated = Observable<Int>()
-    weak var delegate: ChatViewModelDelegate?
     var title: String {
         return contact.name
     }
@@ -48,10 +43,6 @@ final class ChatViewModel {
     
     func isMessageValid(withText text: String) -> Bool {
         return !text.isEmpty
-    }
-    
-    func tapBack() {
-        delegate?.didTapBack()
     }
     
     private func addUserMessage(text: String) {

@@ -25,7 +25,6 @@ final class AppCoordinator: Coordinator {
     
     private func startChat(with contact: Contact) {
         let coordinator = ChatCoordinator(router: router, contact: contact)
-        coordinatorAllocator.allocate(coordinator as Coordinator)
         coordinator.start()
     }
 }
