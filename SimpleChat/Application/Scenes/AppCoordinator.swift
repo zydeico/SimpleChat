@@ -15,12 +15,8 @@ final class AppCoordinator {
         self.router = router
     }
     
-    func showChats() {
+    func startChat() {
         let contact = Contact(name: "", lastName: "", imageData: nil)
-        startChat(with: contact)
-    }
-    
-    private func startChat(with contact: Contact) {
         let coordinator = ChatCoordinator(router: router, contact: contact)
         coordinator.start()
     }

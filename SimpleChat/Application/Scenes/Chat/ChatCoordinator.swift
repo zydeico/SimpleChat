@@ -29,3 +29,24 @@ final class ChatCoordinator {
         router.push(vc)
     }
 }
+
+class ChatCoordinatorV2 {
+    
+    let router: Router! = nil
+    private let contact: Contact
+    
+    init(contact: Contact) {
+        self.contact = contact
+    }
+    
+    func start() {
+        showChatScreen()
+    }
+    
+    private func showChatScreen() {
+        let vc = ChatViewController.instantiate()
+        let vm = ChatViewModel(contact: contact, autoResponder: ReverseAutoResponder())
+        vc.viewModel = vm
+        router?.push(vc)
+    }
+}

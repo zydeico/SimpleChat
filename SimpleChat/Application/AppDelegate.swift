@@ -32,6 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func startApp() {
         chatCoordinator = AppCoordinator(router: AppRouter(rootPresentable: rootViewController))
-        chatCoordinator?.showChats()
+        chatCoordinator?.startChat()
     }
 }
